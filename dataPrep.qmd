@@ -201,3 +201,383 @@ Click on the Results tab. Only 1 dataset may be available (SRTM1N32E022V3). 
 At SRTM1N32E022V3 pane, click on the download icon ![](https://lh7-us.googleusercontent.com/geIOaWuwRRrKC_F_5z37bEbUYAY9x5CPmFWDNZnfPOzY8g1W0ilH403zRr4RuzjT4fogkZXm5QTAL3_NdV0d4xKsjOQVTyJKTDMAf2udzSFUtXeUvFeMpdi8pIKW2a1EgDcgPhuC3RFOXBCLVv0ndts). 
 
 In the Download Options window, click download for the GeoTIFF 1 Arc-second option to download the DEM TIFF file.
+
+# Data Dictionary
+
+### Vector Layers
+
+#### Buildings
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| osm_id     |
+| fclass     |
+| name       |
+
+#### Hexagon
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| id         |
+| left       |
+| top        |
+| right      |
+| bottom     |
+| PCode      |
+
+#### Evacuation Centres
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| osm_id     |
+| fclass     |
+| name       |
+
+#### evacuation centres points
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| osm_id     |
+| fclass     |
+| name       |
+
+#### flood_extent
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| Sensor_Dat |
+| Area_m2    |
+| Area_ha    |
+| SHAPE_Leng |
+| SHAPE_Area |
+
+#### flood_zonal_statistics
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| Sensor_Dat |
+| \_mean     |
+| \_median   |
+| \_min      |
+| \_max      |
+
+#### Non-viable School Sites
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| osm_id     |
+| fclass     |
+| name       |
+
+#### Viable School Sites/Evacuation Centres
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Storage**                           |
+| **Encoding**                          |
+| **Geometry**                          |
+| **Feature Count**                     |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|            |
+|------------|
+| **Fields** |
+| **Name**   |
+| fid        |
+| osm_id     |
+| fclass     |
+| name       |
+
+### **Raster Layers/Files**
+
+#### DEM_clipped
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Extent**                            |
+| **Width**                             |
+| **Height**                            |
+| **Data type**                         |
+| **GDAL Driver Metadata**              |
+| **Pixel size**                        |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|                    |
+|--------------------|
+| **Band count = 1** |
+| **Number**         |
+| 1                  |
+
+#### 01_07_23
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Extent**                            |
+| **Width**                             |
+| **Height**                            |
+| **Data type**                         |
+| **GDAL Driver Metadata**              |
+| **Pixel size**                        |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|                    |
+|--------------------|
+| **Band count = 4** |
+| **Number**         |
+| 1                  |
+| 2                  |
+| 3                  |
+| 4                  |
+
+#### 01_07_23_clipped
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Extent**                            |
+| **Width**                             |
+| **Height**                            |
+| **Data type**                         |
+| **GDAL Driver Metadata**              |
+| **Pixel size**                        |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|                    |
+|--------------------|
+| **Band count = 3** |
+| **Number**         |
+| 1                  |
+| 2                  |
+| 3                  |
+
+#### 13_09_23
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Extent**                            |
+| **Width**                             |
+| **Height**                            |
+| **Data type**                         |
+| **GDAL Driver Metadata**              |
+| **Pixel size**                        |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|                    |
+|--------------------|
+| **Band count = 4** |
+| **Number**         |
+| 1                  |
+| 2                  |
+| 3                  |
+| 4                  |
+
+#### 13_09_23_clipped
+
+|                                       |
+|---------------------------------------|
+| **General Information**               |
+| **Name**                              |
+| **Provider**                          |
+| **Extent**                            |
+| **Width**                             |
+| **Height**                            |
+| **Data type**                         |
+| **GDAL Driver Metadata**              |
+| **Pixel size**                        |
+| **Coordinate Reference System (CRS)** |
+| **Name**                              |
+| **Units**                             |
+| **Method**                            |
+| **Celestial Body**                    |
+| **Reference**                         |
+
+|                    |
+|--------------------|
+| **Band count = 3** |
+| **Number**         |
+| 1                  |
+| 2                  |
+| 3                  |
+
+ 
+
+\
+\
+\
+\
+\
+\
+
+\
