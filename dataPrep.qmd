@@ -1,4 +1,6 @@
-## 3.1 Datasets Used
+# Data Preperation
+
+## Datasets Used
 
 To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Centres and Medical Services, we need the DEM layer of Derna, the hexagonal layer of Derna City, the OSM layer of Derna and the floor extent of Derna. These data can be obtained from the following datasets:
 
