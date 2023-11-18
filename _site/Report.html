@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>smt201gis-t3 – report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">smt201gis-t3</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Report.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Methodology</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analysis.html" rel="" target="">
+ <span class="menu-text">Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./results.html" rel="" target="">
+ <span class="menu-text">Results</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./learned.html" rel="" target="">
+ <span class="menu-text">learned.html</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link active" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used">3.1 Datasets Used</a>
+  <ul class="collapse">
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
+  </ul></li>
+  <li><a href="#data-preperation" id="toc-data-preperation" class="nav-link" data-scroll-target="#data-preperation">3.2 Data Preperation</a></li>
+  <li><a href="#importing" id="toc-importing" class="nav-link" data-scroll-target="#importing">3.2.1 Importing</a></li>
+  <li><a href="#preparing-the-openaerial-satellite-images" id="toc-preparing-the-openaerial-satellite-images" class="nav-link" data-scroll-target="#preparing-the-openaerial-satellite-images">3.2.2 Preparing the OpenAerial Satellite Images</a>
+  <ul class="collapse">
+  <li><a href="#retrieving-images-from-openaerialmap" id="toc-retrieving-images-from-openaerialmap" class="nav-link" data-scroll-target="#retrieving-images-from-openaerialmap">3.2.2.1 Retrieving images from OpenAerialMap</a></li>
+  <li><a href="#clipping-satellite-images-to-study-area" id="toc-clipping-satellite-images-to-study-area" class="nav-link" data-scroll-target="#clipping-satellite-images-to-study-area">3.2.2.2 Clipping satellite images to study area</a></li>
+  </ul></li>
+  <li><a href="#extracting-the-dem-data-from-usgs" id="toc-extracting-the-dem-data-from-usgs" class="nav-link" data-scroll-target="#extracting-the-dem-data-from-usgs">3.2.3 Extracting the DEM data from USGS</a></li>
+  <li><a href="#population-density-analysis" id="toc-population-density-analysis" class="nav-link" data-scroll-target="#population-density-analysis">3.3 Population Density Analysis</a></li>
+  <li><a href="#dem-sites-map" id="toc-dem-sites-map" class="nav-link" data-scroll-target="#dem-sites-map"><strong>DEM Sites Map</strong></a></li>
+  <li><a href="#site-suitability-of-evacuation-centres" id="toc-site-suitability-of-evacuation-centres" class="nav-link" data-scroll-target="#site-suitability-of-evacuation-centres">3.4 Site Suitability of Evacuation Centres</a></li>
+  <li><a href="#accessibility-choropleth" id="toc-accessibility-choropleth" class="nav-link" data-scroll-target="#accessibility-choropleth"><strong>Accessibility Choropleth</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<section id="datasets-used" class="level2">
+<h2 class="anchored" data-anchor-id="datasets-used">3.1 Datasets Used</h2>
+<p>To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Centres and Medical Services, we need the DEM layer of Derna, the hexagonal layer of Derna City, the OSM layer of Derna and the floor extent of Derna. These data can be obtained from the following datasets:</p>
+<ul>
+<li><p><strong>OSM data for Libya</strong></p>
+<ul>
+<li><p><strong>Format</strong>: SHP</p></li>
+<li><p><strong>Purpose</strong>: An open street map shapefile of Libya used to determine the number of buildings, schools and universities in Derna city.</p></li>
+<li><p><strong>Link</strong>: https://download.geofabrik.de/africa/libya.html</p></li>
+<li><p><strong>Note</strong>: Download the file named “libya-latest-free.shp.zip” under “Commonly Used Formats”.</p></li>
+</ul></li>
+<li><p>Flood impact on Derna</p>
+<ul>
+<li><p>Format: SHP</p></li>
+<li><p>Purpose: A shapefile showing the extent of Derna city that has been affected by the flood</p></li>
+<li><p>Link: https://data.humdata.org/dataset/flood-impact-assessment-in-derna-dams-east-province-libya</p></li>
+</ul></li>
+<li><p>Derna Health Facilities</p>
+<ul>
+<li><p>Format: Geopackage</p></li>
+<li><p>Purpose: A geopackage with the locations of health facilities in Libya</p></li>
+<li><p>Link: https://data.humdata.org/dataset/hotosm_lby_health_facilities</p></li>
+</ul></li>
+<li><p>Derna Road Layer</p>
+<ul>
+<li><p>Format: Geopackage</p></li>
+<li><p>Purpose: A geopackage of the roads that are located within Libya</p></li>
+<li><p>Link: https://data.humdata.org/dataset/hotosm_lby_roads</p></li>
+</ul></li>
+<li><p>Derna City Hexagon Layer</p>
+<ul>
+<li><p>Format: SHP</p></li>
+<li><p>Purpose: A shapefile showing Derna city classified into hexagons</p></li>
+<li><p>Link: Provided on elearn</p></li>
+</ul></li>
+<li><p>30-meter Digital Elevation Model (DEM) data, taken from the Shuttle Radar Topography Mission (SRTM)</p>
+<ul>
+<li><p>Format: TIFF</p></li>
+<li><p>Purpose: A raster dataset of the elevation across Derna city to assess the suitability of selected potential evacuation centres and healthcare facilities.</p></li>
+<li><p>Link: https://earthexplorer.usgs.gov/</p></li>
+<li><p>Note: You will need to create a USGS account in order to download the SRTM DEM data. Follow the steps in 3.2.3 Extracting the DEM data from USGS to retrieve the data.</p></li>
+</ul></li>
+<li><p>Open aerial map of Derna</p>
+<ul>
+<li><p>Format: TIFF</p></li>
+<li><p>Purpose: A raster layers used as a background for all our maps</p></li>
+<li><p>Link: https://map.openaerialmap.org/#/-18.6328125,18.47960905583197,3?_k=2un4va</p></li>
+<li><p>Note: Follow the steps in 3.2.2 to extract the satellite images for the Derna study area.</p></li>
+</ul></li>
+</ul>
+<section id="steps" class="level3">
+<h3 class="anchored" data-anchor-id="steps">Steps</h3>
+<p>Create 3 folders named "data.shp", "geopackage" and "data.tif"</p>
+<ol type="1">
+<li><p><strong>data.shp</strong> folder</p>
+<ul>
+<li>Unzip the "libya-latest-free.shp", "FL20230912LBY_SHP" and "Derna_city_250m_hexagon" files and put them into the folder.</li>
+</ul></li>
+<li><p><strong>data.tif</strong> folder</p>
+<ul>
+<li><p>Put the "01_07_23" and "13_09_23" TIFF files into the folder</p></li>
+<li><p>Move the "n32_e022_1arc_v3" TIFF file into the folder</p></li>
+</ul></li>
+<li><p><strong>geopackage</strong> folder</p>
+<ul>
+<li>Unzip the "hotosm_lby_health_facilities_gpkg" and "hotosm_lby_roads_gpkg" files and put them into the folder.</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="data-preperation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preperation">3.2 Data Preperation</h2>
+</section>
+<section id="importing" class="level2">
+<h2 class="anchored" data-anchor-id="importing">3.2.1 Importing</h2>
+<p>Open QGIS and start a new project (Project &gt; New). Change CRS to EPSG:3197 at the bottom right. This is the CRS location of where Derna city falls under.</p>
+<p>From the browser sidebar, look for the following layer file in their respective folders and add them into layers (via double click):</p>
+<ul>
+<li><p>Derna_city_250m_hexagon</p></li>
+<li><p>PHR_20230913_FloodExtent_Derna</p></li>
+<li><p>gis_osm_buildings_a_free_1</p></li>
+<li><p>gis_osm_pois_a_free_1</p></li>
+<li><p>Health Facilities</p></li>
+<li><p>Roads (Only linestring layer)</p></li>
+<li><p>13_09_23</p></li>
+<li><p>01_07_23</p></li>
+<li><p>n32_e022_1arc_v3</p></li>
+</ul>
+</section>
+<section id="preparing-the-openaerial-satellite-images" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-the-openaerial-satellite-images">3.2.2 Preparing the OpenAerial Satellite Images</h2>
+<section id="retrieving-images-from-openaerialmap" class="level3">
+<h3 class="anchored" data-anchor-id="retrieving-images-from-openaerialmap">3.2.2.1 Retrieving images from OpenAerialMap</h3>
+<p>Go to <a href="https://openaerialmap.org/" class="uri">https://openaerialmap.org/</a> and click Start Exploring to open up the map view.<img src="https://lh7-us.googleusercontent.com/DE9-nfs-m7pmZuQREgQwQv9RNq-CuIKa9LYk7uM68rPbJv0oyaxz1W5CZbnIrHPMJdVfiEd2wIXAWYEdgLjMyUlyeSTeCDP5tWKk-eVL23D2DWcyZ2m2bx5n91MuS4NUT69hUbHBqunOZuxhyOGZOww.png" class="img-fluid"></p>
+<p>In the map page, type Derna into the search bar and click the Derna option to locate it on the map view.&nbsp;</p>
+<p>Click the gridsquare containing Derna. It should have 2 satellite images – one pre-flood taken in July 2023, and one post-flood taken in September 2023.<br>
+</p>
+<p><img src="https://lh7-us.googleusercontent.com/lrlj2S_bZUIgr7rQ1Wm23nk5x1gw_19Vy74QxINCYVlh7vKIrmyIgTs0bO5N-s-fDbRI7waZywS-wM-RJyOfad2Z1JdGJjlBLx7aYcRbb3kH7_UzxXVOnmkWiY1qREQ8mKo8x9pe6kdy1D9Udh3QTaA.png" class="img-fluid"></p>
+<p>Click the thumbnail of the first image and click the download icon in the small 4-icon toolbar.&nbsp;</p>
+<p><img src="https://lh7-us.googleusercontent.com/mDyEdHcnjRmASEF4HA-XreCMrdRCe3u-aXN3u0arHecjJO67mlN9XEVBnp0EKoJghoEmN4FVFL3AhW5kEybd7u9Bp2uszAAPdNMKfUrIPdudT5WSpZhqJvCkO0xmcdRD7G2KfvgTosRKwnJofiz0zeY.png" class="img-fluid"></p>
+<p>Once downloaded, rename the file to "01_07_2023". Move the file into its respective data folder in your project folder.</p>
+<p>Repeat this for the second satellite image, and name it "13_09_23".</p>
+</section>
+<section id="clipping-satellite-images-to-study-area" class="level3">
+<h3 class="anchored" data-anchor-id="clipping-satellite-images-to-study-area">3.2.2.2 Clipping satellite images to study area</h3>
+<p>Import the layers using "Layer" from the top menu bar &gt; Add Layer &gt; Add Raster Layer…</p>
+<ul>
+<li><p>Under Raster dataset(s), click the three dots icon.&nbsp;</p>
+<ul>
+<li>Navigate to your data folder and select both downloaded TIFF files</li>
+</ul></li>
+<li><p>Click Add</p></li>
+</ul>
+<p>We will be clipping the satellite images extracted from OpenAerial to our study area: the hexagon map of Derna city.&nbsp;</p>
+<ul>
+<li>Navigate to: "Raster" from the top menu bar &gt; Extraction &gt; Clip Raster by Extent…</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/u73Ym0he1ECU_ygDTIHytwf3teLr1XBh3VwF2Vg88qNVR2zgPOEky3Z64EOoSzNItEskX-iCVYYXkigfXN9LTuyJkrE-LRldyHoYhRaX_7vQ78bBVuS4SrJC8pX_v31lMv0-HHHCRSWK_qaBJur_hM4.png" class="img-fluid"></p>
+<ul>
+<li><p>For the input fields, set</p>
+<ul>
+<li><p>Input layer: 13_09_23</p></li>
+<li><p>Clipping extent:</p>
+<ul>
+<li><p>Click the down arrow next to this icon <img src="https://lh7-us.googleusercontent.com/HiZf6bJ239r0iBBRGUF9Q4sQbNn541sZN9yrCAWFhFejPsTUCP6PxeBnhD6N7GD9K2VFTetNBy26Xc7Y4jfgH77vwAeoSLPeexk50Z9_qP6UqkKZebyT0DefeAio0js4JoQY7Qy6Xuutuof29f39CDk.png" class="img-fluid"></p></li>
+<li><p>Under Calculate from layer, select Derna_city_250m_hexagon</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>This should create a temporary raster layer named Clipped in your Layers panel. We will now save this as a TIFF file in our data.tif folder within our project folder.</p>
+<p>Repeat the steps above for 13_09_23 to produce the 13_09_23_clipped layer.</p>
+</section>
+</section>
+<section id="extracting-the-dem-data-from-usgs" class="level2">
+<h2 class="anchored" data-anchor-id="extracting-the-dem-data-from-usgs">3.2.3 Extracting the DEM data from USGS</h2>
+<p>Launch the <a href="https://earthexplorer.usgs.gov/">USGS website</a>. Before you can download any data set from the USGS portal, you will need to register for an account. <img src="https://lh7-us.googleusercontent.com/3v7YZyHO4dWh1-4UfUtGsND7C5l2giFQLulJLhj-uQbhKQtz8lRqWmhRYLjOv546Q-VoBv8Pypr_n74xRYN6JzQ19w48nlnWXK-VIYahctUPpZ3_3yQ6g-kQHbwQP2phx-Qp85kXlr3RpLJT2QvdsSE.png" class="img-fluid"></p>
+<p>Click on Login button located at the upper-right corner of the webpage. Complete the online registration, including verification.&nbsp;</p>
+<p>Now you should be able to download data from USGS.</p>
+<section id="selecting-the-study-area-of-derna" class="level4">
+<h4 class="anchored" data-anchor-id="selecting-the-study-area-of-derna">3.2.3.1 Selecting the study area of Derna</h4>
+<p>In the lefthand side under Search Criteria,&nbsp;</p>
+<ul>
+<li><p>Select World Features</p></li>
+<li><p>Under Feature name, type Darnah</p></li>
+<li><p>Click Show</p></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/_35YA-9F6Uw8FMdvPWKf8rNgQMe5N-t12RvceJdKWPgqNRqPMWcqlNdm-n6MF7EaHISa37QRvO8N2XLEbOCulolxgTmakDPqAGp97jo0vyhg5w0u1Kn0rwE_ZKvZ9d7ANbvKSQMQRwPMsno-L7xdF-g.png" class="img-fluid"></p>
+<p>In the results generated, select Darnah to see the map view.</p>
+<p>Using the plus button in the upper right corner of the map, zoom in until your view is similar to this:</p>
+<p><img src="https://lh7-us.googleusercontent.com/_J1z-squJ1-i_vB3IbhBLq3YaOm24Gc5HGW1TQKQfYhCS4pduAS3nCcZEGFEqjzsBf8pN0voRnIo4Ft1MYHQdqx9xE7bcgn158-gDaMlFVm_vCH8dovpt9oIWdmvzk9HBPqXsLhzzDBrF6gpAC9C-rA.png" class="img-fluid"></p>
+<p>Select the Use Map button.</p>
+</section>
+<section id="selecting-the-dem-data-to-download" class="level4">
+<h4 class="anchored" data-anchor-id="selecting-the-dem-data-to-download">3.2.3.2 Selecting the DEM data to download</h4>
+<p>Next, we will select which data set to download. Under the Dataset tab, navigate to Digital Elevation &gt; SRTM and expand it.&nbsp;</p>
+<p>Click on the check-box in front of SRTM 1 Arc-Second Global.</p>
+<p><img src="https://lh7-us.googleusercontent.com/FsxcMzB_MvR9vrEXHhoLhMqDPpG2m0BdVDBgOABsZzSw1kmmneVtc982uF6mj74o_dHSXUgq48RaqzwvBeK0U5T-j9q0sA34OxLc6uGivulz2hzDTASZUQfhJ_HZYBSxaa7sX6r3I0azp6BS7yMsY0w.png" class="img-fluid"></p>
+</section>
+<section id="downloading-the-dem" class="level4">
+<h4 class="anchored" data-anchor-id="downloading-the-dem">3.2.3.3 Downloading the DEM</h4>
+<p>Click on the Results tab. Only 1 dataset may be available (SRTM1N32E022V3).&nbsp;</p>
+<p>At SRTM1N32E022V3 pane, click on the download icon <img src="https://lh7-us.googleusercontent.com/geIOaWuwRRrKC_F_5z37bEbUYAY9x5CPmFWDNZnfPOzY8g1W0ilH403zRr4RuzjT4fogkZXm5QTAL3_NdV0d4xKsjOQVTyJKTDMAf2udzSFUtXeUvFeMpdi8pIKW2a1EgDcgPhuC3RFOXBCLVv0ndts.png" class="img-fluid">.&nbsp;</p>
+<p>In the Download Options window, click download for the GeoTIFF 1 Arc-second option to download the DEM TIFF file.</p>
+</section>
+</section>
+<section id="population-density-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="population-density-analysis">3.3 Population Density Analysis</h2>
+<section id="deriving-buildings-with-derna-city" class="level4">
+<h4 class="anchored" data-anchor-id="deriving-buildings-with-derna-city">3.3.1 Deriving buildings with Derna City</h4>
+<p>At this stage, we need to analyse the building layer given and only select buildings that fall within the Derna city area.</p>
+<ul>
+<li><p>Navigate to: Vector &gt; Research Tools &gt; Select by Location…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Select features from: gis_osm_buildings_a_free_1</p></li>
+<li><p>Where the features (geometric predicate): intersect</p></li>
+<li><p>By comparing to the features from: Derna_city_250m_hexagon</p>
+<ul>
+<li><p>Advanced option:</p>
+<ul>
+<li>Invalid feature filtering: Do not Filter (Better Performance)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>3.3_select_location</p>
+<ul>
+<li>Click "Run"</li>
+</ul>
+<p>We will now save only the selected features within our study area for use.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "gis_osm_buildings_a_free_1" &gt; Export &gt; Save Selected Features As…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Format: GeoPackage</p></li>
+<li><p>File name:</p>
+<ul>
+<li><p>Name the file "Derna"</p></li>
+<li><p>Save the file in "GeoPackage"</p></li>
+</ul></li>
+<li><p>Layer Name: Buildings</p></li>
+<li><p>CRS: EPSG:3197</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/4oPaAayJdFA4Y_-1DO0MuqgKzl_CCsIv0ObbcGvMkQLFEWFEW8dy4V5whipM5foKdCrab6VwGGtGk-QLv1DGivpdi-zW_8jDb75MaNPq6FXpj3iU19RLcYTh4TMkDBiBP_Xe-CG1zV9bTlEGm6sCRW8.png" class="img-fluid"></p>
+<ul>
+<li><p>Click on "Ok"</p></li>
+<li><p>Remove "gis_osm_buildings_a_free_1" layer</p></li>
+</ul>
+</section>
+<section id="identifying-residentialapartment-buildings" class="level4">
+<h4 class="anchored" data-anchor-id="identifying-residentialapartment-buildings">3.3.2 Identifying residential/apartment buildings</h4>
+<p><br>
+</p>
+<p>At this stage, we need to identify the residential and apartment buildings in Derna as well as classify those buildings that are unclassified into the above-mentioned buildings based on area size.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - Buildings" &gt; Open Attribute Table</p></li>
+<li><p>From the Attribute Table:</p>
+<ul>
+<li><p>Click on "Select features using an expression"&nbsp;</p></li>
+<li><p>For the input fields:</p>
+<ul>
+<li>Expression box: “type”&nbsp; =&nbsp; ‘apartments’ or&nbsp; “type”&nbsp; =&nbsp; ‘residential’</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/9GG1Amfom_IuPEtnpvOJVLP8NrLcpvlxDZV8UOLUil6JZ_p5wJhGJo3rPEK1yA5oIryTRSHYgTzYlmqCI3uEb8eQMA-N7lhIjSUn7RZeSOIRsIbf41K5iv5F8Gz_JFzlpSie3fj_nbLWAo5VHPd1JM4.png" class="img-fluid"></p>
+<ul>
+<li><p>Click on "Select Features"</p></li>
+<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "Residential_Apartment_Buildings".&nbsp;</p></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "Residential_Apartment_Buildings" &gt; Open Attribute Table</p></li>
+<li><p>From the Attribute Table:</p>
+<ul>
+<li><p>Click on "Open field calculator" <img src="https://lh7-us.googleusercontent.com/CaBe2Z_ZimjieWmZ9wxXEgbml7U_vOIt_DyKaQ7iLclWp6DdSNzLg8tClkkoK2e_R34kMjU6oQiePnmMiwwdYz89OcZuJenK64u6AjvwRpV-CPxWdFLWz1H4dvb0W_sbUJJk_h6ihN8YLaBCDgEggZs.png" class="img-fluid"></p>
+<ul>
+<li><p>For the input fields:</p>
+<ul>
+<li><p>Output field name: Area</p></li>
+<li><p>Output field type: Decimal number (real)</p></li>
+<li><p>Expression box: $area</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/MWeRQrVd7lpFaLE1JiZHaoDd45KDwxSZ9edDgwqoCArGwIw6Wen6iW5Mzb4K7-KypwR4-5V15yqbU4VhsCPjVWOzkQPl20rBxQ2Rz8eCMa17oOAiyEciwNkQhAOtdgfR_QfeigRk01KI5X5jYRaW39w.png" class="img-fluid"></p>
+<ul>
+<li>Click on "Ok"</li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Click on "Toggle edits" <img src="https://lh7-us.googleusercontent.com/KPtfo_uvtaj9tF3Plpjs2IjfSelKYC0qgA6I42FzdCKLDtbmU5qRVbVDN-q3iYtUK69LnwVJ5ihHnXDrKfw0j9GvQyTk5EQKf79JBMc1sAH2_FCqKG3PKneGMRvgFMdZZ2W-Kc4X2aA-JWqCKcweJUY.png" class="img-fluid"></p>
+<ul>
+<li>Save the changes made<br>
+<br>
+<br>
+</li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li>Take note of the "area" value of a apartment block, in this case, the building with fid of 4094</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/pjuxti08loBqW705eCOs1yiOUcbYJ-A6pqDqEhPi2mpvYR3gnfqOUzXMngTlkFa-jC53BxNeNXJUcJqG-5kNRdTLpMDltbh_9vU-kvvZg_65SU5rFv9c14_ae9v6fCpKN38sjgQ4EE8XC4l-HSdRHVo.png" class="img-fluid"></p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - Buildings" &gt; Open Attribute Table</p></li>
+<li><p>From the Attribute Table:</p>
+<ul>
+<li><p>Click on "Select features using an expression"&nbsp;</p></li>
+<li><p>For the input fields:</p>
+<ul>
+<li><p>Expression box: $area &lt;= 416.96021051961</p></li>
+<li><p>Number is from the area of the residential area we found previously.</p></li>
+</ul></li>
+</ul></li>
+<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "population_buildings".&nbsp;</p></li>
+<li><p>Remove "Derna — Residential_Apartment_Buildings" and "Derna — Buildings" layers.</p></li>
+</ul>
+</section>
+<section id="cleaning-up-the-attribute-table" class="level4">
+<h4 class="anchored" data-anchor-id="cleaning-up-the-attribute-table">3.3.3 Cleaning up the attribute table</h4>
+<p>We will now remove any unneeded fields for our analysis to keep the table tidy.</p>
+<p>Right click the "population_buildings" layer and open its Attribute Table. Toggle editing mode by clicking the pencil icon in the top left of the attribute table window.</p>
+<p>Once in editing mode, click the delete fields icon <img src="https://lh7-us.googleusercontent.com/JZefrtGhdSOZw1ol4Dcz_iWi28QuDqCeifob-9DgYq3bQlCFRoc-DzIW6t4yvcIrmznWyE-C9HBRtnLxtD7mmpZHKy_xT7Labur9rRNp0YPpIObJ0VyPUOQmGdsbLdW8rKqW41J5TEjZbBWoQkK1gpc.png" class="img-fluid"> .&nbsp;</p>
+<ul>
+<li><p>In the dialog window, select "code" and "fclass"</p></li>
+<li><p>Click OK to delete these fields</p></li>
+</ul>
+<p>Click the pencil icon again to save the changes.</p>
+</section>
+<section id="converting-building-polygons-into-points" class="level4">
+<h4 class="anchored" data-anchor-id="converting-building-polygons-into-points">3.3.4 Converting building polygons into points</h4>
+<p>In this step, we will use the QGIS plugin realcentroid to convert the residential/apartment buildings into points that we will use in the next step.</p>
+<ul>
+<li><p>Navigate to: Plugins &gt; Manage and Install Plugins… &gt; All &gt; Search for "realcentroid" &gt; Install Plugin</p></li>
+<li><p>Navigate to: Vector &gt; realcentroid &gt; RealCentroid</p>
+<ul>
+<li><p>For the input fields:</p>
+<ul>
+<li><p>Polygon layer: QueryLayer</p></li>
+<li><p>Output point on surface layer:</p></li>
+</ul></li>
+<li><p>File name: population_buildings_points</p></li>
+<li><p>File location: data.shp</p></li>
+<li><p>Check the "Add to map canvas" box</p></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/mzo3f0Im4WZJabeTKsyBJaseWpwzMb0j33ZVPUVoEaBqCzCsRWIJTHp8XJKrQul1skIxMF-yLhGIth1E_CtrKJfrpSSN4AJbiN1Kwfh2I8SspwO3lbIGzZJ7gryUq9mmoa2nTrzHeVPx9AeJcetJcD0.png" class="img-fluid"></p>
+</section>
+<section id="presenting-the-information-in-a-choropleth-map" class="level4">
+<h4 class="anchored" data-anchor-id="presenting-the-information-in-a-choropleth-map">3.3.5 Presenting the information in a choropleth map</h4>
+<ul>
+<li><p>Navigate to: Vector &gt; Analysis Tools &gt; Count Points in Polygon…</p>
+<ul>
+<li><p>For the input fields:</p>
+<ul>
+<li><p>Polygons: Derna_city_250m_hexagon</p></li>
+<li><p>Points: population_buildings_points.shp</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/Is2Ci-GBFGAieXKGOmBIdi4Q7Vedj3k5LXtnbeyXv5TmWbfppVbqEA1jljREu6GTnAsp1iLQyzlremtPQX3IyVCHTowy2Uyx-ZYorPks2NPtf030nXikjhtAmvNDRBV0bjQ7_9BpIy1oWdiT4PLvMcQ.png" class="img-fluid"></p>
+<ul>
+<li><p>Click on "Run"</p></li>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "population_density".&nbsp;</p></li>
+<li><p>Remove the "Count", "population_buildings_points.shp" and "Derna - population_buildings"&nbsp; layers.</p></li>
+</ul>
+<p>Now that we have the population_density field ready, we will use its values to create our choropleth map.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - population_density"&gt; Properties&gt; Symbology</p>
+<ul>
+<li><p>For the input fields:</p>
+<ul>
+<li><p>Change "Single Symbol" to "Graduated"</p></li>
+<li><p>Value: NUMPOINTS</p></li>
+<li><p>Mode: Natural Break (Jenks)</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/UvPbmrtgSTvo3qPJaf0zBW36Kg8Abh2_TDwItkIPjUvAOEcYpcxLqezP76YRjOUgqn-IBD1gHM_ykXprBmjSIhc7BguvS7bDEo1yPgO1v8PkNNU-uuL4yb7iYvtaCIqknBNG5_vLHTKpLiUpD-KatPo.png" class="img-fluid"></p>
+<ul>
+<li>Click on "OK"</li>
+</ul>
+</section>
+<section id="adding-a-backdrop" class="level4">
+<h4 class="anchored" data-anchor-id="adding-a-backdrop">3.3.6 Adding a backdrop</h4>
+<p>In this part, we will be adding a backdrop to the map, so that an aerial map of Derna city can be used to make the map easily associable.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - population_density"&gt; Properties&gt; Symbology</p>
+<ul>
+<li><p>For the input fields:</p>
+<ul>
+<li>Opacity: 60%</li>
+</ul></li>
+</ul></li>
+<li><p>Using 01_07_23 as a backdrop should make the map look like this:</p></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/BapDfSbn_o-8et2ge_H_b5mlgibFP0yWLqeRAzcavGUCxWXttctGMPSMzgvkpzIo3s-BUIz9XA-PSFi-gCUZ9Fm3NETqkpjfMSICWGfCwmTLOc5QV7qNTiNfudVAAmV7y4ye2oWDDzi_lGPcokAE1ug.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="dem-sites-map" class="level2">
+<h2 class="anchored" data-anchor-id="dem-sites-map"><strong>DEM Sites Map</strong></h2>
+</section>
+<section id="site-suitability-of-evacuation-centres" class="level2">
+<h2 class="anchored" data-anchor-id="site-suitability-of-evacuation-centres">3.4 Site Suitability of Evacuation Centres</h2>
+<p>Now we'll create the map to assess site suitability of the identified potential evacuation sites (schools and universities).</p>
+<section id="preparing-the-dem-layer" class="level4">
+<h4 class="anchored" data-anchor-id="preparing-the-dem-layer">3.4.1 Preparing the DEM layer</h4>
+<p>The DEM layer (n32_e022_1arc_v3) should be in your layers panel from the earlier steps.&nbsp;</p>
+<p>Since the DEM covers a larger area of Northern Africa, we will clip the DEM to our study area.</p>
+<ul>
+<li><p>Navigate to: Raster &gt; Extraction &gt; Clip Raster by Mask Layer…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Input layer: n32_e022_1arc_v3</p></li>
+<li><p>Mask layer: Derna_city_250m_hexagon</p></li>
+<li><p>Target CRS: EPSG:3197 LGD2006 / Libya ™ Zone 12</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>We will now save the temporary clipped layer to our geopackage.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "Clipped"&nbsp;</p></li>
+<li><p>Go to: Export &gt; Save Features As…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Format: GeoPackage</p></li>
+<li><p>File name: navigate to your project folder and double click your geopackage</p></li>
+<li><p>Layer Name: DEM_clipped</p></li>
+<li><p>CRS: EPSG:3197</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Click on "Ok"</p></li>
+<li><p>Remove "n32_e022_1arc_v3" layer and the temporary "Clipped" layer</p></li>
+</ul>
+</section>
+<section id="determining-the-flood-extent" class="level4">
+<h4 class="anchored" data-anchor-id="determining-the-flood-extent">3.4.2 Determining the flood extent</h4>
+<p>In the step, we will cut out the extent of the flood that affects Derna City</p>
+<ul>
+<li><p>Navigate: Vector &gt; Geoprocessing Tools &gt; Clip…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Input layer: PHR_20230913_FloodExtent_Derna</p></li>
+<li><p>Overlay layer: Derna_city_250m_hexagon</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/EqKB8g6T-r61BsCXLhnAAEifWH0-V3FNORe3IDSFNMHVBqtcPtBHEVsyqtliR25gplsba8vqGwY5br9sfOfIKlTK5ev4s-mvNn6kl_0qDICb0PunUapf4JFU2QYvt6wtqmz5CD-lDWxLY4rkHR5gf00.png" class="img-fluid"></p>
+<ul>
+<li><p>Click on "Run"</p></li>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "flood_extent".&nbsp;</p></li>
+<li><p>Remove the "PHR_20230913_FloodExtent_Derna" and "Clipped" layer.</p></li>
+<li><p>Navigate: Layers Sidebar &gt; Right click "flood_extent" &gt; Properties &gt; Symbology</p>
+<ul>
+<li><p>Under "Fill" &gt; Left click "Simple Fill"</p>
+<ul>
+<li><p>Fill colour: "Transparent Fill"</p></li>
+<li><p>Stroke Width: 1</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/yRAmTR3-mfIxUJ7vidQtB_Ff7Wi3DYhnotcA4fyE6RlxhNBwUgTaJDzk70V5swPBbqSABiItLziiYkFZ2ajT7fgmw_4O-sAkmeBYEVJrCKiE-H0cX9c2lAbrfEn6WhFEiS6SJp55ioncsrzeVWTPHGI.png" class="img-fluid"></p>
+<p>o &nbsp; Click "OK"</p>
+<p>Following the steps in 3.3.3, keep only the fields listed and remove all other fields:</p>
+<ul>
+<li>fid, Sensor_Dat, Area_m2, Area_ha, SHAPE_Leng, SHAPE_Area</li>
+</ul>
+<p><br>
+</p>
+</section>
+<section id="extracting-statistics-from-flood-extent-for-ranking" class="level4">
+<h4 class="anchored" data-anchor-id="extracting-statistics-from-flood-extent-for-ranking">3.4.3 Extracting statistics from flood extent for ranking</h4>
+<p>We will use the flood extent polygon to analyse the statistics of the flood elevation levels reached. We will use the native Zonal Statistics function for this.</p>
+<ul>
+<li><p>Navigate to: "Processing" from the top menu bar &gt; Toolbox</p></li>
+<li><p>In the Processing Toolbox panel, search for "Zonal Statistics"</p></li>
+<li><p>Double click on the Zonal Statistics function under Raster Analysis</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Input layer: flood_extent</p></li>
+<li><p>Raster layer: DEM_clipped</p></li>
+<li><p>Under Statistics to calculate, click the three dots icon</p>
+<ul>
+<li>Select Mean, Median, Minimum, and Maximum</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Click "OK"</p></li>
+</ul>
+<p>Following the steps from 3.4.1, save the temporary Zonal Statistics layer into your "Derna" GeoPackage and name it "flood_zonal_statistics". Afterwards, remove the temporary Zonal Statistics layer.</p>
+<p>We will quickly clean up the data table. Right click the "flood_zonal_statistics" layer and open its Attribute Table.&nbsp;</p>
+<ul>
+<li><p>Following the steps in 3.3.3, keep only the fields listed and remove all other fields:</p>
+<ul>
+<li>fid, Sensor_Dat, _mean, _median, _min, _max</li>
+</ul></li>
+</ul>
+<p>Observing the summary statistics, take note of the median, mean and max values.</p>
+</section>
+<section id="ranking-the-elevation-levels-by-colour" class="level4">
+<h4 class="anchored" data-anchor-id="ranking-the-elevation-levels-by-colour">3.4.4 Ranking the elevation levels by colour</h4>
+<p>We will now reflect the ranking of the elevation suitability using the summary statistics from the previous section.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click "DEM_clipped" &gt; Properties &gt; Symbology</p>
+<ul>
+<li><p>For the input fields under Band Rendering:</p>
+<ul>
+<li><p>Render type: Singleband pseudocolor</p></li>
+<li><p>Edit the values as shown below:</p>
+<ul>
+<li><p>Orange - Median</p></li>
+<li><p>Yellow - Mean</p></li>
+<li><p>Green - Max</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/T7rt9zBJE7Z-jJbbG0D6T12lA9ab28yCnp3tjxsjAEwkO_7Ok3KQ2gqdjXn4Au5nM_ReKn6yRnVXmPXvf_T13GxqHLmxpGcguOHG2QreUeQKDv1ZYkCC7L0LsAvm9MAs6gvYGELtr5nTqTRccf4OBMw.png" class="img-fluid"></p>
+<ul>
+<li>Gamma: 0.50</li>
+</ul>
+<!-- -->
+<ul>
+<li>Once ready, click "Apply"</li>
+</ul>
+<!-- -->
+<ul>
+<li><p>In the Properties window, navigate to the Transparency tab</p>
+<ul>
+<li><p>Set Global Opacity to 70%</p></li>
+<li><p>Click "Apply"</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="extracting-evacuation-centres-as-points" class="level4">
+<h4 class="anchored" data-anchor-id="extracting-evacuation-centres-as-points">3.4.5 Extracting Evacuation Centres as points</h4>
+<p>We will be using the Points of Interest (POIs) shapefile from the OSM data for Libya. First, we will clip the data to our study area of the hexagon map.&nbsp;</p>
+<ul>
+<li><p>Navigate to: Vector &gt; Research Tools &gt; Select by Location…</p>
+<ul>
+<li><p>For the input fields</p>
+<ul>
+<li><p>Select features from: gis_osm_pois_a_free_1</p></li>
+<li><p>Where the features (geometric predicate): intersect</p></li>
+<li><p>By comparing to the features from: Derna_city_250m_hexagon</p>
+<ul>
+<li><p>Under Advanced options:</p>
+<ul>
+<li>Set invalid feature filtering: Do not Filter (Better Performance)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Click "Run"</p></li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "POIS ’’.&nbsp;</p></li>
+<li><p>Remove the "gis_osm_pois_a_free_1"&nbsp; layer.&nbsp;</p></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/YAl0JYQseseoir0zkmAZwB9M3SKQTwq6O8AduKP7IpATTZ2L4nL4rFbdYRZSnFW-8cBRSKHKqppIKA5QOAsOr-Xz-iWrD1_7-iDo-B9wx5NgEZ22BTE1zlxW_TuxRDWnDuhEPxpZDyniSCWyG08VIRE.png" class="img-fluid"></p>
+<p>Now, we will find the schools and universities in the Derna city area.&nbsp;</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - POIS" &gt; Open Attribute Table</p></li>
+<li><p>From the Attribute Table:</p>
+<ul>
+<li><p>Click on "Select features using an expression"&nbsp;</p></li>
+<li><p>For the input fields:</p>
+<ul>
+<li>Expression box:&nbsp; “fclass”&nbsp; =&nbsp; ‘school’ or&nbsp; “fclass”&nbsp; =&nbsp; ‘university’&nbsp;</li>
+</ul></li>
+</ul></li>
+<li><p>Click on "Select Features"</p></li>
+<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "evacuation_centres".&nbsp;</p></li>
+</ul>
+<p>We will then convert the polygons layer into a point layer.</p>
+<p>Following the steps shown previously in 3.3.4, convert the evacuation_centres polygons into points using realcentroid.&nbsp;</p>
+<ul>
+<li><p>Save the resulting layer into the "Derna" GeoPackage and name it "evacuation_centres_points".&nbsp;</p></li>
+<li><p>Remove the "Centroids", "Derna - evacuation_centres", "Derna - POIS" and "gis_osm_pois_a_free_1" layers.</p></li>
+</ul>
+<p><br>
+</p>
+<p><img src="https://lh7-us.googleusercontent.com/hhBgUpqvpVir8TNF_9Jj0mNCA1sACkjRkyMrP0lkXwp3z6L4RByRY5aYo7sqFhwYMEsnV-iE2L4iX1GSPjtcUOWKe4dj-P4Tds5oa6rS28_Gi3DHDJVCb8vQSxkPy-kz2qSeHyfZyfnQ0ZDBrOcJ18c.png" class="img-fluid"></p>
+<p><br>
+</p>
+<p>Following the steps in 3.3.3, keep only the fields listed and remove all other fields:</p>
+<ul>
+<li>id, osm_id, fclass, name</li>
+</ul>
+<p><br>
+</p>
+</section>
+<section id="separating-the-viable-and-non-viable-evacuation-centres" class="level4">
+<h4 class="anchored" data-anchor-id="separating-the-viable-and-non-viable-evacuation-centres">3.4.6 Separating the Viable and Non-viable Evacuation Centres</h4>
+<p>Referencing the colour-ranked DEM layer, we will separate the viable and non-viable sites from the "evacuation_centres_points" layer.</p>
+<p><br>
+</p>
+<section id="extracting-the-non-viable-sites" class="level5">
+<h5 class="anchored" data-anchor-id="extracting-the-non-viable-sites">3.4.6.1 Extracting the Non-Viable Sites</h5>
+<p>We will select out the evacuation centres that fall within the higher risk areas of flooding (the red-yellow colours) based on visual reference.</p>
+<ul>
+<li><p>Navigate to: Toolbar &gt; Select Features by Polygon <img src="https://lh7-us.googleusercontent.com/4KEfcuvNOU_DJhYDBSjIXg8kfVyPGMFATK97_bQMTJRD-ip95DlQ-_Z_7xK-tgpj_l11YaTwwtSYausXikXyb6xQbwmag4RQMyEuGaWj90lrQDhyb6lgiNj7W-vMP3eQLYTzl3EwYKsE9HSjrtcJBUA.png" class="img-fluid"></p>
+<ul>
+<li><p>Make sure the "evacuation_centres_points" layer is selected in the Layers Panel.</p></li>
+<li><p>Draw a rough polygon that selects all the points that fall within red-coloured to yellow-coloured areas, using left mouse clicks to create the points of the polygon.</p></li>
+<li><p>Right click to confirm the selection of features within the shape drawn.</p></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/gmiKlCmrMvSoGZX9Cru29pexw3lFvhBGkXEFoeWjOc9lgzzUtjH3M20U0FVtYATp0MuGOpFIGIFz4Nck2lVGF_OgPkvtqc555jtgidN_Jh1bAbxKmcfHm5Py8XgA9TfIQqPDOOEIJakv4KJ6tXaHQG4.png" class="img-fluid"></p>
+<p>Following the steps in 3.3.1, save the selected points into your geopackage as "Non-viable School Sites".&nbsp;</p>
+<ul>
+<li>Rename the new layer in the Layers panel to remove the name of the geopackage for tidiness.</li>
+</ul>
+<p><br>
+</p>
+</section>
+<section id="adding-the-symbol-for-non-viable-sites" class="level5">
+<h5 class="anchored" data-anchor-id="adding-the-symbol-for-non-viable-sites">3.4.6.2 Adding the symbol for Non-viable Sites</h5>
+<p>To indicate that these initial sites are no longer considered, we will change the point symbol to a cross icon.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click "Non-viable School Sites" &gt; Properties &gt; Symbology</p>
+<ul>
+<li><p>Under Marker, click Simple Marker</p>
+<ul>
+<li><p>For input fields:</p>
+<ul>
+<li><p>Symbol layer type: SVG Marker</p></li>
+<li><p>SVG Image: <img src="https://lh7-us.googleusercontent.com/ZjS9C9E5WiL5Woa7fCYlpHFL-Pklph5V1OkPBSmS0-AzKKxwUxWt0ndGBL6qnuJE39h2ekpaSgBe98LwAoZE5kmbHjVpuEZqOafl8y-MtL-jBipOWcB5KjkT8zb1zHtGJ-8zlJrITUeI_bFBaF3uUns.png" class="img-fluid"></p></li>
+<li><p>Size: 5.50 Millimetres</p></li>
+<li><p>Rotation: 45º</p></li>
+<li><p>Fill colour: Teal (HTML notation: #00ffde)</p>
+<ul>
+<li>Choose a colour that will stand out against the red-yellow colours of the DEM layer</li>
+</ul></li>
+<li><p>Stroke colour: Black (HTML notation: #000000)</p></li>
+<li><p>Stroke Width: 0.20 Millimetres</p></li>
+</ul></li>
+</ul></li>
+<li><p>Feel free to change the colours as you wish</p></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</section>
+<section id="extracting-the-viable-sites" class="level5">
+<h5 class="anchored" data-anchor-id="extracting-the-viable-sites">3.4.6.3 Extracting the Viable Sites</h5>
+<p>We will now select the remaining evacuation centres which should fall within the lower risk areas of flooding (the green-blue colours).</p>
+<ul>
+<li><p>Navigate to: Toolbar &gt; Select Features by Polygon <img src="https://lh7-us.googleusercontent.com/4KEfcuvNOU_DJhYDBSjIXg8kfVyPGMFATK97_bQMTJRD-ip95DlQ-_Z_7xK-tgpj_l11YaTwwtSYausXikXyb6xQbwmag4RQMyEuGaWj90lrQDhyb6lgiNj7W-vMP3eQLYTzl3EwYKsE9HSjrtcJBUA.png" class="img-fluid"></p>
+<ul>
+<li><p>Make sure the "evacuation_centres_points" layer is selected in the Layers Panel.</p></li>
+<li><p>Draw a rough polygon that selects all the remaining points, using left mouse clicks to create the points of the polygon.</p></li>
+<li><p>Right click to confirm the selection of features within the shape drawn.</p></li>
+</ul></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/gx94f-Kv0nw_i2CfP3_un4KE1sANvE7KI3gYBGofDNDa6PYiWZFZhW0WZsp158WbwZGN_gBvWMHj3YkC4AwV989CZfgw2STOuyoaolOGYSJlJxBwnlEbJGYo88c3y6IW5GKwzwZr6Lx6ObwY3XYDHrw.png" class="img-fluid"></p>
+<p>Following the steps in 3.3.1, save the selected points into your geopackage as "Viable School Sites".&nbsp;</p>
+<ul>
+<li>Rename the new layer in the Layers panel to remove the name of the geopackage for tidiness.</li>
+</ul>
+<p><br>
+</p>
+</section>
+<section id="adding-the-symbol-for-viable-sites" class="level5">
+<h5 class="anchored" data-anchor-id="adding-the-symbol-for-viable-sites">3.4.6.4 Adding the symbol for Viable Sites</h5>
+<p>To indicate that these sites are suitable evacuation centres, we will change the point symbol to a shelter icon.</p>
+<ul>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click "Viable School Sites" &gt; Properties &gt; Symbology</p>
+<ul>
+<li><p>Under Marker, click Simple Marker</p>
+<ul>
+<li><p>For input fields:</p>
+<ul>
+<li><p>Symbol layer type: SVG Marker</p></li>
+<li><p>SVG Image: <img src="https://lh7-us.googleusercontent.com/wx6Z0gru5dvcQq6t2U8GJ0J8AQ_lBqFVZK3vB5aVaxe97eDPrlMKvmX_RhgkYiUnKkNoykOkwVVe5-01TnksqF5I_KZGM_R20nmFAmEJOKmgEqel0viFc7bq2sz-9DIX0SMWLcx_1OeRKNT54in2oAA.png" class="img-fluid"></p></li>
+<li><p>Size: 8.00 Millimetres</p></li>
+<li><p>Fill colour: White (HTML notation: #ffffff)</p></li>
+<li><p>Stroke colour: Blue (HTML notation: #0006c0)</p></li>
+<li><p>Stroke Width: 0.30 Millimetres</p></li>
+<li><p>Under Offset, y: -2.0 Millimetres</p></li>
+</ul></li>
+</ul></li>
+<li><p>Feel free to change the colours as you wish, but do ensure these icons visually distinct from the cross icons in colour</p></li>
+</ul></li>
+</ul>
+<p>From the Layers panel, uncheck the "evacuation_centres_points" layer to hide its visibility. Your map should look something like this:</p>
+<p><img src="https://lh7-us.googleusercontent.com/BwAfNyjViuU6R02PPf4L91_tHxk32QBO5MzcyOxsD4UsY3oySclhopm-mJTsY3Q1FDtcGtztJXr4JP0rYUxq8SmvTpyai1lTL1_vCZSAQ_U-868ol-q_7NlwxcjB3mf46dmZQD9mP1ZvsQx38EY5gao.png" class="img-fluid"></p>
+<p><br>
+</p>
+</section>
+</section>
+<section id="adding-the-satellite-view-backdrop" class="level4">
+<h4 class="anchored" data-anchor-id="adding-the-satellite-view-backdrop">3.4.7 Adding the Satellite View Backdrop</h4>
+<p>We will be adding a backdrop to the map, so that an aerial map of Derna city can be used to make the map easily associable.</p>
+<ul>
+<li>Using 13_09_23_clipped as a backdrop should make the map look like this:</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/bJKqo7tVperVIq2VYtksewWJOHVp2aBpCS1yPvxrukq8QPUbq6ymq9D9My0xz7KIQwFLPhVsQbjiwS9rGhoX9mYR8oiTD3EYepbhMWsq8rqFhkJB0C-fFH6EDDRYetIY3eY5xlOcqCYmQ2n89o8emJk.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="accessibility-choropleth" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility-choropleth"><strong>Accessibility Choropleth</strong></h2>
+<p>3.5 Accessibility analysis</p>
+<p>In this part, we will be analysing the accessibility of health facilities and evacuation centres in Derna city.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -8,7 +8,11 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-
+      - Report.qmd
+      - analysis.qmd
+      - results.qmd
+      - learned.qmd
+      
 format:
   html:
     theme: cosmo
