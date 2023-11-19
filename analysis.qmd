@@ -12,13 +12,13 @@ In the event of a flood, it is imperative to allocate resources effectively. The
 
 ![](https://lh7-us.googleusercontent.com/2Rz0Sr7Nis_8rselsAuz9RWqi7rjQcJ4UDOUVyxBsVxll8IUoBy-HO7NHh8DjbBEySnTj25ziWnU2xvk3YUPOB93ZCsoykf-MHBk5L_ozBgTzDIC4aznqviBEbziLpdklKPVYqMBWjb18xE_I50jyGA)
 
-In Derna\'s context as a small rural town, repurposing existing buildings as evacuation centres is a more practical option to building permanent shelters -- which may be costly and are largely space-inefficient. Schools and universities were thus chosen as primary evacuation centres, as they tend to have large sheltered halls which minimises the extra effort to protect from weather conditions, and sanitation amenities are already installed in the buildings for convenience and maintaining hygiene. 
+In Derna's context as a small rural town, repurposing existing buildings as evacuation centres is a more practical option to building permanent shelters -- which may be costly and are largely space-inefficient. Schools and universities were thus chosen as primary evacuation centres, as they tend to have large sheltered halls which minimises the extra effort to protect from weather conditions, and sanitation amenities are already installed in the buildings for convenience and maintaining hygiene. 
 
 \
 
 However, the sites have to be assessed for their risk of being flooded to ascertain that they will be fit as evacuation centres. As Derna is a generally low-lying city with large areas of flatland near its coastal edge, we decided to rank the suitability of areas for evacuation and safety based on elevation level. 
 
-By retrieving Derna\'s Digital Elevation Model (DEM) and using QGIS\'s Zonal Statistics raster analysis function, we extracted the summary statistics of elevation within the flood extent area (with reference to the DEM). We then used these values to rank the flood risk of different elevation levels across Derna as seen in the map above. 
+By retrieving Derna's Digital Elevation Model (DEM) and using QGIS's Zonal Statistics raster analysis function, we extracted the summary statistics of elevation within the flood extent area (with reference to the DEM). We then used these values to rank the flood risk of different elevation levels across Derna as seen in the map above. 
 
 Red areas are the lowest-lying coastal areas which are most likely to be affected by future floods based on the previous flood level. Green and blue areas further inland have higher elevation and thus are less prone to flooding, making them safer and better suited as evacuation centres to house the displaced population. Hence, based on visual analysis of the rank-coloured DEM layer, we eliminated school buildings that were within the highest areas of risk (denoted by red areas). We also eliminated venues that were moderately affected (denoted by yellow areas) to account for any unforeseen rises in future flood levels.
 
