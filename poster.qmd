@@ -1,0 +1,5 @@
+### Poster
+
+A soft copy of our project poster displayed during the townhall presentation is attached below.
+
+![](_site/site_libs/images/POSTER.png)
