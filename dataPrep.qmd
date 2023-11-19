@@ -14,7 +14,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   **Note**: Download the file named "libya-latest-free.shp.zip" under "Commonly Used Formats".
 
--   Flood impact on Derna
+-   **Flood impact on Derna**
 
     -   Format: SHP
 
@@ -22,7 +22,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Link: https://data.humdata.org/dataset/flood-impact-assessment-in-derna-dams-east-province-libya
 
--   Derna Health Facilities
+-   **Derna Health Facilities**
 
     -   Format: Geopackage
 
@@ -30,7 +30,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Link: https://data.humdata.org/dataset/hotosm_lby_health_facilities
 
--   Derna Road Layer
+-   **Derna Road Layer**
 
     -   Format: Geopackage
 
@@ -38,7 +38,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Link: https://data.humdata.org/dataset/hotosm_lby_roads
 
--   Derna City Hexagon Layer
+-   **Derna City Hexagon Layer**
 
     -   Format: SHP
 
@@ -46,7 +46,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Link: Provided on elearn
 
--   30-meter Digital Elevation Model (DEM) data, taken from the Shuttle Radar Topography Mission (SRTM)
+-   **30-meter Digital Elevation Model (DEM) data, taken from the Shuttle Radar Topography Mission (SRTM)**
 
     -   Format: TIFF
 
@@ -56,7 +56,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Note: You will need to create a USGS account in order to download the SRTM DEM data. Follow the steps in 3.2.3 Extracting the DEM data from USGS to retrieve the data.
 
--   Open aerial map of Derna
+-   **Open aerial map of Derna**
 
     -   Format: TIFF
 
@@ -68,23 +68,23 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
 ### Steps
 
-Create 3 folders named \"data.shp\", \"geopackage\" and \"data.tif\"
+Create 3 folders named "data.shp", "geopackage" and "data.tif"
 
 1.  **data.shp** folder
 
-    -   Unzip the \"libya-latest-free.shp\", \"FL20230912LBY_SHP\" and \"Derna_city_250m_hexagon\" files and put them into the folder.
+    -   Unzip the "libya-latest-free.shp", "FL20230912LBY_SHP" and "Derna_city_250m_hexagon" files and put them into the folder.
 
 2.  **data.tif** folder
 
-    -   Put the \"01_07_23\" and \"13_09_23\" TIFF files into the folder
+    -   Put the "01_07_23" and "13_09_23" TIFF files into the folder
 
-    -   Move the \"n32_e022_1arc_v3\" TIFF file into the folder
+    -   Move the "n32_e022_1arc_v3" TIFF file into the folder
 
 3.  **geopackage** folder
 
-    -   Unzip the \"hotosm_lby_health_facilities_gpkg\" and \"hotosm_lby_roads_gpkg\" files and put them into the folder.
+    -   Unzip the "hotosm_lby_health_facilities_gpkg" and "hotosm_lby_roads_gpkg" files and put them into the folder.
 
-## 3.2 Data Preperation 
+## 3.2 Data Preperation
 
 ## 3.2.1 Importing
 
@@ -126,13 +126,13 @@ Click the thumbnail of the first image and click the download icon in the small 
 
 ![](https://lh7-us.googleusercontent.com/mDyEdHcnjRmASEF4HA-XreCMrdRCe3u-aXN3u0arHecjJO67mlN9XEVBnp0EKoJghoEmN4FVFL3AhW5kEybd7u9Bp2uszAAPdNMKfUrIPdudT5WSpZhqJvCkO0xmcdRD7G2KfvgTosRKwnJofiz0zeY)
 
-Once downloaded, rename the file to \"01_07_2023\". Move the file into its respective data folder in your project folder.
+Once downloaded, rename the file to "01_07_2023". Move the file into its respective data folder in your project folder.
 
-Repeat this for the second satellite image, and name it \"13_09_23\".
+Repeat this for the second satellite image, and name it "13_09_23".
 
 ### 3.2.2.2 Clipping satellite images to study area
 
-Import the layers using \"Layer\" from the top menu bar \> Add Layer \> Add Raster Layer...
+Import the layers using "Layer" from the top menu bar \> Add Layer \> Add Raster Layer...
 
 -   Under Raster dataset(s), click the three dots icon. 
 
@@ -142,7 +142,7 @@ Import the layers using \"Layer\" from the top menu bar \> Add Layer \> Add Rast
 
 We will be clipping the satellite images extracted from OpenAerial to our study area: the hexagon map of Derna city. 
 
--   Navigate to: \"Raster\" from the top menu bar \> Extraction \> Clip Raster by Extent...
+-   Navigate to: "Raster" from the top menu bar \> Extraction \> Clip Raster by Extent...
 
 ![](https://lh7-us.googleusercontent.com/u73Ym0he1ECU_ygDTIHytwf3teLr1XBh3VwF2Vg88qNVR2zgPOEky3Z64EOoSzNItEskX-iCVYYXkigfXN9LTuyJkrE-LRldyHoYhRaX_7vQ78bBVuS4SrJC8pX_v31lMv0-HHHCRSWK_qaBJur_hM4)
 
@@ -210,376 +210,275 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 #### Buildings
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|                   |                        |
+|-------------------|------------------------|
+| **Name**          | Buildings              |
+| **Provider**      | ogr                    |
+| **Storage**       | GPKG                   |
+| **Encoding**      | UTF-8                  |
+| **Geometry**      | Polygon (MultiPolygon) |
+| **Feature Count** | 8,850                  |
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| osm_id     |
-| fclass     |
-| name       |
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|          |           |                                                                                                 |
+|-----------|-----------|--------------------------------------------------|
+| **Name** | **Type**  | **Remarks**                                                                                     |
+| fid      | Integer64 | Unique feature id to the layer                                                                  |
+| osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
+| fclass   | String    | Class name of this feature.                                                                     |
+| name     | String    | Name of this feature, like a street or place name.                                              |
+
+: **Fields**
 
 #### Hexagon
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|                   |                         |
+|-------------------|-------------------------|
+| **Name**          | Derna_city_250m_hexagon |
+| **Provider**      | ogr                     |
+| **Storage**       | GPKG                    |
+| **Encoding**      | UTF-8                   |
+| **Geometry**      | Polygon (MultiPolygon)  |
+| **Feature Count** | 361                     |
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| id         |
-| left       |
-| top        |
-| right      |
-| bottom     |
-| PCode      |
+: **General Information**
 
-#### Evacuation Centres
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+: **Coordinate Reference System (CRS)**
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| osm_id     |
-| fclass     |
-| name       |
+|          |           |                                |
+|----------|-----------|--------------------------------|
+| **Name** | **Type**  | **Remarks**                    |
+| fid      | Integer64 | Unique feature id to the layer |
+| id       | Real      |                                |
+| left     | Real      |                                |
+| top      | Real      |                                |
+| right    | Real      |                                |
+| bottom   | Real      |                                |
+| PCode    | String    |                                |
 
-#### evacuation centres points
+: **Fields**
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+#### Flood Extent
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| osm_id     |
-| fclass     |
-| name       |
+|                   |                        |
+|-------------------|------------------------|
+| **Name**          | flood_extent           |
+| **Provider**      | ogr                    |
+| **Storage**       | GPKG                   |
+| **Encoding**      | UTF-8                  |
+| **Geometry**      | Polygon (MultiPolygon) |
+| **Feature Count** | 1                      |
 
-#### flood_extent
+: **General Information**
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| Sensor_Dat |
-| Area_m2    |
-| Area_ha    |
-| SHAPE_Leng |
-| SHAPE_Area |
+: **Coordinate Reference System (CRS)**
 
-#### flood_zonal_statistics
+|            |           |                                             |
+|------------|-----------|---------------------------------------------|
+| **Name**   | **Type**  | **Remarks**                                 |
+| fid        | Integer64 | Unique feature id to the layer              |
+| Sensor_Dat | Date      | The date when the data was remotely sensed. |
+| Area_m2    | Real      | Area of flood extent, in square metres      |
+| Area_ha    | Real      | Area of flood extent, in hectares.          |
+| SHAPE_Leng | Real      |                                             |
+| SHAPE_Area | Real      |                                             |
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+: **Fields**
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| Sensor_Dat |
-| \_mean     |
-| \_median   |
-| \_min      |
-| \_max      |
+#### Flood Zonal Statistics
 
-#### Non-viable School Sites
+|                   |                        |
+|-------------------|------------------------|
+| **Name**          | flood_zonal_statistics |
+| **Provider**      | ogr                    |
+| **Storage**       | GPKG                   |
+| **Encoding**      | UTF-8                  |
+| **Geometry**      | Polygon (MultiPolygon) |
+| **Feature Count** | 1                      |
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+: **General Information**
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| osm_id     |
-| fclass     |
-| name       |
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-#### Viable School Sites/Evacuation Centres
+: **Coordinate Reference System (CRS)**
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Storage**                           |
-| **Encoding**                          |
-| **Geometry**                          |
-| **Feature Count**                     |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|            |           |                                                                      |
+|------------|-----------|----------------------------------------------------------------------|
+| **Name**   | **Type**  | **Remarks**                                                          |
+| fid        | Integer64 | Unique feature id to the layer                                       |
+| Sensor_Dat | Date      | The date when the data was remotely sensed.                          |
+| \_mean     | Real      | Summary statistics of the flood extent elevation levels based on DEM |
+| \_median   | Real      |                                                                      |
+| \_min      | Real      |                                                                      |
+| \_max      | Real      |                                                                      |
 
-|            |
-|------------|
-| **Fields** |
-| **Name**   |
-| fid        |
-| osm_id     |
-| fclass     |
-| name       |
+: **Fields**
 
-### **Raster Layers/Files**
+#### Non-Viable School Sites
 
-#### DEM_clipped
+|                   |                         |
+|-------------------|-------------------------|
+| **Name**          | Non-viable School Sites |
+| **Provider**      | ogr                     |
+| **Storage**       | GPKG                    |
+| **Encoding**      | UTF-8                   |
+| **Geometry**      | Point (Point)           |
+| **Feature Count** | 8                       |
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Extent**                            |
-| **Width**                             |
-| **Height**                            |
-| **Data type**                         |
-| **GDAL Driver Metadata**              |
-| **Pixel size**                        |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+: **General Information**
 
-|                    |
-|--------------------|
-| **Band count = 1** |
-| **Number**         |
-| 1                  |
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-#### 01_07_23
+: **Coordinate Reference System (CRS)**
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Extent**                            |
-| **Width**                             |
-| **Height**                            |
-| **Data type**                         |
-| **GDAL Driver Metadata**              |
-| **Pixel size**                        |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|          |           |                                                                                                 |
+|----------|-----------|-------------------------------------------------------------------------------------------------|
+| **Name** | **Type**  | **Remarks**                                                                                     |
+| fid      | Integer64 | Unique feature id to the layer                                                                  |
+| osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
+| fclass   | String    | Class name of this feature.                                                                     |
+| name     | String    | Name of this feature, like a street or place name.                                              |
 
-|                    |
-|--------------------|
-| **Band count = 4** |
-| **Number**         |
-| 1                  |
-| 2                  |
-| 3                  |
-| 4                  |
+: **Fields**
 
-#### 01_07_23_clipped
+#### Viable School Sites / Evacuation Centres
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Extent**                            |
-| **Width**                             |
-| **Height**                            |
-| **Data type**                         |
-| **GDAL Driver Metadata**              |
-| **Pixel size**                        |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+|                   |                                        |
+|-------------------|----------------------------------------|
+| **Name**          | Viable School Sites/Evacuation Centres |
+| **Provider**      | ogr                                    |
+| **Storage**       | GPKG                                   |
+| **Encoding**      | UTF-8                                  |
+| **Geometry**      | Point (Point)                          |
+| **Feature Count** | 14                                     |
 
-|                    |
-|--------------------|
-| **Band count = 3** |
-| **Number**         |
-| 1                  |
-| 2                  |
-| 3                  |
+: **General Information**
 
-#### 13_09_23
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Extent**                            |
-| **Width**                             |
-| **Height**                            |
-| **Data type**                         |
-| **GDAL Driver Metadata**              |
-| **Pixel size**                        |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+: **Coordinate Reference System**
 
-|                    |
-|--------------------|
-| **Band count = 4** |
-| **Number**         |
-| 1                  |
-| 2                  |
-| 3                  |
-| 4                  |
+|          |           |                                                                                                 |
+|----------|-----------|-------------------------------------------------------------------------------------------------|
+| **Name** | **Type**  | **Remarks**                                                                                     |
+| fid      | Integer64 | Unique feature id to the layer                                                                  |
+| osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
+| fclass   | String    | Class name of this feature.                                                                     |
+| name     | String    | Name of this feature, like a street or place name.                                              |
 
-#### 13_09_23_clipped
+: **Fields**
 
-|                                       |
-|---------------------------------------|
-| **General Information**               |
-| **Name**                              |
-| **Provider**                          |
-| **Extent**                            |
-| **Width**                             |
-| **Height**                            |
-| **Data type**                         |
-| **GDAL Driver Metadata**              |
-| **Pixel size**                        |
-| **Coordinate Reference System (CRS)** |
-| **Name**                              |
-| **Units**                             |
-| **Method**                            |
-| **Celestial Body**                    |
-| **Reference**                         |
+#### Health Facilities
 
-|                    |
-|--------------------|
-| **Band count = 3** |
-| **Number**         |
-| 1                  |
-| 2                  |
-| 3                  |
+|                   |                     |
+|-------------------|---------------------|
+| **Name**          | Derna - HF_combined |
+| **Provider**      | ogr                 |
+| **Storage**       | GPKG                |
+| **Encoding**      | UTF-8               |
+| **Geometry**      | Point (Point)       |
+| **Feature Count** | 5                   |
 
- 
+: **General Information**
 
-\
-\
-\
-\
-\
-\
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
 
-\
+: **Coordinate Reference System (CRS)**
+
+|                         |           |                                                    |
+|-------------------------|-----------|----------------------------------------------------|
+| **Name**                | **Type**  | **Remarks**                                        |
+| fid                     | Integer64 | Unique feature id to the layer                     |
+| name                    | String    | Name of this feature, like a street or place name. |
+| healthcare:speciality   | String    | Specialty of the health facility                   |
+| capacity:persons        | String    | Capacity of the health facility                    |
+| addr:full               | string    | Address of the health facility                     |
+| fid_2                   | Integer64 | Unique feature id to the layer                     |
+| name_2                  | String    | Name of this feature, like a street or place name. |
+| healthcare:speciality_2 | String    | Specialty of the health facility                   |
+| capacity:persons_2      | String    | Capacity of the health facility                    |
+| addr:full_2             | string    | Address of the health facility                     |
+
+: **Fields**
+
+#### Population Density
+
+|                   |                        |
+|-------------------|------------------------|
+| **Name**          | Derna - HF_combined    |
+| **Provider**      | ogr                    |
+| **Storage**       | GPKG                   |
+| **Encoding**      | UTF-8                  |
+| **Geometry**      | Polygon (MultiPolygon) |
+| **Feature Count** | 361                    |
+
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|           |           |                                     |
+|-----------|-----------|-------------------------------------|
+| **Name**  | **Type**  | **Remarks**                         |
+| fid       | Integer64 | Unique feature id to the layer      |
+| NUMPOINTS | Real      | Number of buildings in each hexagon |
+
+: **Fields**

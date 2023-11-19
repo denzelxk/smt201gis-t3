@@ -22,3 +22,6 @@ format:
 
 editor: visual
 
+theme: 
+  dark: darkly
+  light: flatly

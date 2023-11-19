@@ -68,23 +68,23 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
 ### Steps
 
-Create 3 folders named \"data.shp\", \"geopackage\" and \"data.tif\"
+Create 3 folders named "data.shp", "geopackage" and "data.tif"
 
 1.  **data.shp** folder
 
-    -   Unzip the \"libya-latest-free.shp\", \"FL20230912LBY_SHP\" and \"Derna_city_250m_hexagon\" files and put them into the folder.
+    -   Unzip the "libya-latest-free.shp", "FL20230912LBY_SHP" and "Derna_city_250m_hexagon" files and put them into the folder.
 
 2.  **data.tif** folder
 
-    -   Put the \"01_07_23\" and \"13_09_23\" TIFF files into the folder
+    -   Put the "01_07_23" and "13_09_23" TIFF files into the folder
 
-    -   Move the \"n32_e022_1arc_v3\" TIFF file into the folder
+    -   Move the "n32_e022_1arc_v3" TIFF file into the folder
 
 3.  **geopackage** folder
 
-    -   Unzip the \"hotosm_lby_health_facilities_gpkg\" and \"hotosm_lby_roads_gpkg\" files and put them into the folder.
+    -   Unzip the "hotosm_lby_health_facilities_gpkg" and "hotosm_lby_roads_gpkg" files and put them into the folder.
 
-## 3.2 Data Preperation 
+## 3.2 Data Preperation
 
 ## 3.2.1 Importing
 
@@ -126,13 +126,13 @@ Click the thumbnail of the first image and click the download icon in the small 
 
 ![](https://lh7-us.googleusercontent.com/mDyEdHcnjRmASEF4HA-XreCMrdRCe3u-aXN3u0arHecjJO67mlN9XEVBnp0EKoJghoEmN4FVFL3AhW5kEybd7u9Bp2uszAAPdNMKfUrIPdudT5WSpZhqJvCkO0xmcdRD7G2KfvgTosRKwnJofiz0zeY)
 
-Once downloaded, rename the file to \"01_07_2023\". Move the file into its respective data folder in your project folder.
+Once downloaded, rename the file to "01_07_2023". Move the file into its respective data folder in your project folder.
 
-Repeat this for the second satellite image, and name it \"13_09_23\".
+Repeat this for the second satellite image, and name it "13_09_23".
 
 ### 3.2.2.2 Clipping satellite images to study area
 
-Import the layers using \"Layer\" from the top menu bar \> Add Layer \> Add Raster Layer...
+Import the layers using "Layer" from the top menu bar \> Add Layer \> Add Raster Layer...
 
 -   Under Raster dataset(s), click the three dots icon. 
 
@@ -142,7 +142,7 @@ Import the layers using \"Layer\" from the top menu bar \> Add Layer \> Add Rast
 
 We will be clipping the satellite images extracted from OpenAerial to our study area: the hexagon map of Derna city. 
 
--   Navigate to: \"Raster\" from the top menu bar \> Extraction \> Clip Raster by Extent...
+-   Navigate to: "Raster" from the top menu bar \> Extraction \> Clip Raster by Extent...
 
 ![](https://lh7-us.googleusercontent.com/u73Ym0he1ECU_ygDTIHytwf3teLr1XBh3VwF2Vg88qNVR2zgPOEky3Z64EOoSzNItEskX-iCVYYXkigfXN9LTuyJkrE-LRldyHoYhRaX_7vQ78bBVuS4SrJC8pX_v31lMv0-HHHCRSWK_qaBJur_hM4)
 
@@ -226,11 +226,11 @@ At this stage, we need to analyse the building layer given and only select build
 
 3.3_select_location
 
--   Click \"Run\"
+-   Click "Run"
 
 We will now save only the selected features within our study area for use.
 
--   Navigate to: Layers Sidebar \> Right click \"gis_osm_buildings_a_free_1\" \> Export \> Save Selected Features As...
+-   Navigate to: Layers Sidebar \> Right click "gis_osm_buildings_a_free_1" \> Export \> Save Selected Features As...
 
     -   For the input fields
 
@@ -238,9 +238,9 @@ We will now save only the selected features within our study area for use.
 
         -   File name:
 
-            -   Name the file \"Derna\"
+            -   Name the file "Derna"
 
-            -   Save the file in \"GeoPackage\"
+            -   Save the file in "GeoPackage"
 
         -   Layer Name: Buildings
 
@@ -248,9 +248,9 @@ We will now save only the selected features within our study area for use.
 
 ![](https://lh7-us.googleusercontent.com/4oPaAayJdFA4Y_-1DO0MuqgKzl_CCsIv0ObbcGvMkQLFEWFEW8dy4V5whipM5foKdCrab6VwGGtGk-QLv1DGivpdi-zW_8jDb75MaNPq6FXpj3iU19RLcYTh4TMkDBiBP_Xe-CG1zV9bTlEGm6sCRW8)
 
--   Click on \"Ok\"
+-   Click on "Ok"
 
--   Remove \"gis_osm_buildings_a_free_1\" layer
+-   Remove "gis_osm_buildings_a_free_1" layer
 
 #### 3.3.2 Identifying residential/apartment buildings
 
@@ -258,11 +258,11 @@ We will now save only the selected features within our study area for use.
 
 At this stage, we need to identify the residential and apartment buildings in Derna as well as classify those buildings that are unclassified into the above-mentioned buildings based on area size.
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - Buildings\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - Buildings" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Select features using an expression\" 
+    -   Click on "Select features using an expression" 
 
     -   For the input fields:
 
@@ -270,17 +270,17 @@ At this stage, we need to identify the residential and apartment buildings in De
 
 ![](https://lh7-us.googleusercontent.com/9GG1Amfom_IuPEtnpvOJVLP8NrLcpvlxDZV8UOLUil6JZ_p5wJhGJo3rPEK1yA5oIryTRSHYgTzYlmqCI3uEb8eQMA-N7lhIjSUn7RZeSOIRsIbf41K5iv5F8Gz_JFzlpSie3fj_nbLWAo5VHPd1JM4)
 
--   Click on \"Select Features\"
+-   Click on "Select Features"
 
--   Following the steps shown previously, save the selected features as a GeoPackage in the \"Derna\" GeoPackage and name it \"Residential_Apartment_Buildings\". 
+-   Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "Residential_Apartment_Buildings". 
 
 \
 
--   Navigate to: Layers Sidebar \> Right click \"Residential_Apartment_Buildings\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Residential_Apartment_Buildings" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Open field calculator\" ![](https://lh7-us.googleusercontent.com/CaBe2Z_ZimjieWmZ9wxXEgbml7U_vOIt_DyKaQ7iLclWp6DdSNzLg8tClkkoK2e_R34kMjU6oQiePnmMiwwdYz89OcZuJenK64u6AjvwRpV-CPxWdFLWz1H4dvb0W_sbUJJk_h6ihN8YLaBCDgEggZs)
+    -   Click on "Open field calculator" ![](https://lh7-us.googleusercontent.com/CaBe2Z_ZimjieWmZ9wxXEgbml7U_vOIt_DyKaQ7iLclWp6DdSNzLg8tClkkoK2e_R34kMjU6oQiePnmMiwwdYz89OcZuJenK64u6AjvwRpV-CPxWdFLWz1H4dvb0W_sbUJJk_h6ihN8YLaBCDgEggZs)
 
         -   For the input fields:
 
@@ -292,29 +292,27 @@ At this stage, we need to identify the residential and apartment buildings in De
 
 ![](https://lh7-us.googleusercontent.com/MWeRQrVd7lpFaLE1JiZHaoDd45KDwxSZ9edDgwqoCArGwIw6Wen6iW5Mzb4K7-KypwR4-5V15yqbU4VhsCPjVWOzkQPl20rBxQ2Rz8eCMa17oOAiyEciwNkQhAOtdgfR_QfeigRk01KI5X5jYRaW39w)
 
--   Click on \"Ok\"
+-   Click on "Ok"
 
-```{=html}
 <!-- -->
-```
--   Click on \"Toggle edits\" ![](https://lh7-us.googleusercontent.com/KPtfo_uvtaj9tF3Plpjs2IjfSelKYC0qgA6I42FzdCKLDtbmU5qRVbVDN-q3iYtUK69LnwVJ5ihHnXDrKfw0j9GvQyTk5EQKf79JBMc1sAH2_FCqKG3PKneGMRvgFMdZZ2W-Kc4X2aA-JWqCKcweJUY)
+
+-   Click on "Toggle edits" ![](https://lh7-us.googleusercontent.com/KPtfo_uvtaj9tF3Plpjs2IjfSelKYC0qgA6I42FzdCKLDtbmU5qRVbVDN-q3iYtUK69LnwVJ5ihHnXDrKfw0j9GvQyTk5EQKf79JBMc1sAH2_FCqKG3PKneGMRvgFMdZZ2W-Kc4X2aA-JWqCKcweJUY)
 
     -   Save the changes made\
         \
         \
 
-```{=html}
 <!-- -->
-```
--   Take note of the \"area\" value of a apartment block, in this case, the building with fid of 4094
+
+-   Take note of the "area" value of a apartment block, in this case, the building with fid of 4094
 
 ![](https://lh7-us.googleusercontent.com/pjuxti08loBqW705eCOs1yiOUcbYJ-A6pqDqEhPi2mpvYR3gnfqOUzXMngTlkFa-jC53BxNeNXJUcJqG-5kNRdTLpMDltbh_9vU-kvvZg_65SU5rFv9c14_ae9v6fCpKN38sjgQ4EE8XC4l-HSdRHVo)
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - Buildings\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - Buildings" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Select features using an expression\" 
+    -   Click on "Select features using an expression" 
 
     -   For the input fields:
 
@@ -322,19 +320,19 @@ At this stage, we need to identify the residential and apartment buildings in De
 
         -   Number is from the area of the residential area we found previously.
 
--   Following the steps shown previously, save the selected features as a GeoPackage in the \"Derna\" GeoPackage and name it \"population_buildings\". 
+-   Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "population_buildings". 
 
--   Remove \"Derna --- Residential_Apartment_Buildings\" and \"Derna --- Buildings\" layers.
+-   Remove "Derna --- Residential_Apartment_Buildings" and "Derna --- Buildings" layers.
 
 #### 3.3.3 Cleaning up the attribute table
 
 We will now remove any unneeded fields for our analysis to keep the table tidy.
 
-Right click the \"population_buildings\" layer and open its Attribute Table. Toggle editing mode by clicking the pencil icon in the top left of the attribute table window.
+Right click the "population_buildings" layer and open its Attribute Table. Toggle editing mode by clicking the pencil icon in the top left of the attribute table window.
 
 Once in editing mode, click the delete fields icon ![](https://lh7-us.googleusercontent.com/JZefrtGhdSOZw1ol4Dcz_iWi28QuDqCeifob-9DgYq3bQlCFRoc-DzIW6t4yvcIrmznWyE-C9HBRtnLxtD7mmpZHKy_xT7Labur9rRNp0YPpIObJ0VyPUOQmGdsbLdW8rKqW41J5TEjZbBWoQkK1gpc) . 
 
--   In the dialog window, select \"code\" and \"fclass\"
+-   In the dialog window, select "code" and "fclass"
 
 -   Click OK to delete these fields
 
@@ -344,7 +342,7 @@ Click the pencil icon again to save the changes.
 
 In this step, we will use the QGIS plugin realcentroid to convert the residential/apartment buildings into points that we will use in the next step.
 
--   Navigate to: Plugins \> Manage and Install Plugins... \> All \> Search for \"realcentroid\" \> Install Plugin
+-   Navigate to: Plugins \> Manage and Install Plugins... \> All \> Search for "realcentroid" \> Install Plugin
 
 -   Navigate to: Vector \> realcentroid \> RealCentroid
 
@@ -358,7 +356,7 @@ In this step, we will use the QGIS plugin realcentroid to convert the residentia
 
     -   File location: data.shp
 
-    -   Check the \"Add to map canvas\" box
+    -   Check the "Add to map canvas" box
 
 ![](https://lh7-us.googleusercontent.com/mzo3f0Im4WZJabeTKsyBJaseWpwzMb0j33ZVPUVoEaBqCzCsRWIJTHp8XJKrQul1skIxMF-yLhGIth1E_CtrKJfrpSSN4AJbiN1Kwfh2I8SspwO3lbIGzZJ7gryUq9mmoa2nTrzHeVPx9AeJcetJcD0)
 
@@ -374,19 +372,19 @@ In this step, we will use the QGIS plugin realcentroid to convert the residentia
 
 ![](https://lh7-us.googleusercontent.com/Is2Ci-GBFGAieXKGOmBIdi4Q7Vedj3k5LXtnbeyXv5TmWbfppVbqEA1jljREu6GTnAsp1iLQyzlremtPQX3IyVCHTowy2Uyx-ZYorPks2NPtf030nXikjhtAmvNDRBV0bjQ7_9BpIy1oWdiT4PLvMcQ)
 
--   Click on \"Run\"
+-   Click on "Run"
 
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"population_density\". 
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it"population_density". 
 
--   Remove the \"Count\", \"population_buildings_points.shp\" and \"Derna - population_buildings\"  layers.
+-   Remove the "Count", "population_buildings_points.shp" and "Derna - population_buildings"  layers.
 
 Now that we have the population_density field ready, we will use its values to create our choropleth map.
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - population_density\"\> Properties\> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - population_density"\> Properties\> Symbology
 
     -   For the input fields:
 
-        -   Change \"Single Symbol\" to \"Graduated\"
+        -   Change "Single Symbol" to "Graduated"
 
         -   Value: NUMPOINTS
 
@@ -394,13 +392,13 @@ Now that we have the population_density field ready, we will use its values to c
 
 ![](https://lh7-us.googleusercontent.com/UvPbmrtgSTvo3qPJaf0zBW36Kg8Abh2_TDwItkIPjUvAOEcYpcxLqezP76YRjOUgqn-IBD1gHM_ykXprBmjSIhc7BguvS7bDEo1yPgO1v8PkNNU-uuL4yb7iYvtaCIqknBNG5_vLHTKpLiUpD-KatPo)
 
--   Click on \"OK\"
+-   Click on "OK"
 
 #### 3.3.6 Adding a backdrop
 
 In this part, we will be adding a backdrop to the map, so that an aerial map of Derna city can be used to make the map easily associable.
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - population_density\"\> Properties\> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - population_density"\> Properties\> Symbology
 
     -   For the input fields:
 
@@ -410,11 +408,11 @@ In this part, we will be adding a backdrop to the map, so that an aerial map of 
 
 ![](https://lh7-us.googleusercontent.com/BapDfSbn_o-8et2ge_H_b5mlgibFP0yWLqeRAzcavGUCxWXttctGMPSMzgvkpzIo3s-BUIz9XA-PSFi-gCUZ9Fm3NETqkpjfMSICWGfCwmTLOc5QV7qNTiNfudVAAmV7y4ye2oWDDzi_lGPcokAE1ug)
 
-##   **DEM Sites Map**
+## **DEM Sites Map**
 
 ## 3.4 Site Suitability of Evacuation Centres
 
-Now we\'ll create the map to assess site suitability of the identified potential evacuation sites (schools and universities).
+Now we'll create the map to assess site suitability of the identified potential evacuation sites (schools and universities).
 
 #### 3.4.1 Preparing the DEM layer
 
@@ -434,7 +432,7 @@ Since the DEM covers a larger area of Northern Africa, we will clip the DEM to o
 
 We will now save the temporary clipped layer to our geopackage.
 
--   Navigate to: Layers Sidebar \> Right click \"Clipped\" 
+-   Navigate to: Layers Sidebar \> Right click "Clipped" 
 
 -   Go to: Export \> Save Features As...
 
@@ -448,12 +446,11 @@ We will now save the temporary clipped layer to our geopackage.
 
         -   CRS: EPSG:3197
 
-```{=html}
 <!-- -->
-```
--   Click on \"Ok\"
 
--   Remove \"n32_e022_1arc_v3\" layer and the temporary \"Clipped\" layer
+-   Click on "Ok"
+
+-   Remove "n32_e022_1arc_v3" layer and the temporary "Clipped" layer
 
 #### 3.4.2 Determining the flood extent
 
@@ -469,23 +466,23 @@ In the step, we will cut out the extent of the flood that affects Derna City
 
 ![](https://lh7-us.googleusercontent.com/EqKB8g6T-r61BsCXLhnAAEifWH0-V3FNORe3IDSFNMHVBqtcPtBHEVsyqtliR25gplsba8vqGwY5br9sfOfIKlTK5ev4s-mvNn6kl_0qDICb0PunUapf4JFU2QYvt6wtqmz5CD-lDWxLY4rkHR5gf00)
 
--   Click on \"Run\"
+-   Click on "Run"
 
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"flood_extent\". 
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it"flood_extent". 
 
--   Remove the \"PHR_20230913_FloodExtent_Derna\" and \"Clipped\" layer.
+-   Remove the "PHR_20230913_FloodExtent_Derna" and "Clipped" layer.
 
--   Navigate: Layers Sidebar \> Right click \"flood_extent\" \> Properties \> Symbology
+-   Navigate: Layers Sidebar \> Right click "flood_extent" \> Properties \> Symbology
 
-    -   Under \"Fill\" \> Left click \"Simple Fill\"
+    -   Under "Fill" \> Left click "Simple Fill"
 
-        -   Fill colour: \"Transparent Fill\"
+        -   Fill colour: "Transparent Fill"
 
         -   Stroke Width: 1
 
 ![](https://lh7-us.googleusercontent.com/yRAmTR3-mfIxUJ7vidQtB_Ff7Wi3DYhnotcA4fyE6RlxhNBwUgTaJDzk70V5swPBbqSABiItLziiYkFZ2ajT7fgmw_4O-sAkmeBYEVJrCKiE-H0cX9c2lAbrfEn6WhFEiS6SJp55ioncsrzeVWTPHGI)
 
-o   Click \"OK\"
+o   Click "OK"
 
 Following the steps in 3.3.3, keep only the fields listed and remove all other fields:
 
@@ -497,9 +494,9 @@ Following the steps in 3.3.3, keep only the fields listed and remove all other f
 
 We will use the flood extent polygon to analyse the statistics of the flood elevation levels reached. We will use the native Zonal Statistics function for this.
 
--   Navigate to: \"Processing\" from the top menu bar \> Toolbox
+-   Navigate to: "Processing" from the top menu bar \> Toolbox
 
--   In the Processing Toolbox panel, search for \"Zonal Statistics\"
+-   In the Processing Toolbox panel, search for "Zonal Statistics"
 
 -   Double click on the Zonal Statistics function under Raster Analysis
 
@@ -513,11 +510,11 @@ We will use the flood extent polygon to analyse the statistics of the flood elev
 
             -   Select Mean, Median, Minimum, and Maximum
 
--   Click \"OK\"
+-   Click "OK"
 
-Following the steps from 3.4.1, save the temporary Zonal Statistics layer into your \"Derna\" GeoPackage and name it \"flood_zonal_statistics\". Afterwards, remove the temporary Zonal Statistics layer.
+Following the steps from 3.4.1, save the temporary Zonal Statistics layer into your "Derna" GeoPackage and name it "flood_zonal_statistics". Afterwards, remove the temporary Zonal Statistics layer.
 
-We will quickly clean up the data table. Right click the \"flood_zonal_statistics\" layer and open its Attribute Table. 
+We will quickly clean up the data table. Right click the "flood_zonal_statistics" layer and open its Attribute Table. 
 
 -   Following the steps in 3.3.3, keep only the fields listed and remove all other fields:
 
@@ -525,11 +522,11 @@ We will quickly clean up the data table. Right click the \"flood_zonal_statistic
 
 Observing the summary statistics, take note of the median, mean and max values.
 
-#### 3.4.4 Ranking the elevation levels by colour 
+#### 3.4.4 Ranking the elevation levels by colour
 
 We will now reflect the ranking of the elevation suitability using the summary statistics from the previous section.
 
--   Navigate to: Layers Sidebar \> Right Click \"DEM_clipped\" \> Properties \> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "DEM_clipped" \> Properties \> Symbology
 
     -   For the input fields under Band Rendering:
 
@@ -547,19 +544,17 @@ We will now reflect the ranking of the elevation suitability using the summary s
 
 -   Gamma: 0.50
 
-```{=html}
 <!-- -->
-```
--   Once ready, click \"Apply\"
 
-```{=html}
+-   Once ready, click "Apply"
+
 <!-- -->
-```
+
 -   In the Properties window, navigate to the Transparency tab
 
     -   Set Global Opacity to 70%
 
-    -   Click \"Apply\"
+    -   Click "Apply"
 
 #### 3.4.5 Extracting Evacuation Centres as points
 
@@ -579,40 +574,39 @@ We will be using the Points of Interest (POIs) shapefile from the OSM data for L
 
                 -   Set invalid feature filtering: Do not Filter (Better Performance)
 
-    -   Click \"Run\"
+    -   Click "Run"
 
-```{=html}
 <!-- -->
-```
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"POIS ''. 
 
--   Remove the \"gis_osm_pois_a_free_1\"  layer. 
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it"POIS ''. 
+
+-   Remove the "gis_osm_pois_a_free_1"  layer. 
 
 ![](https://lh7-us.googleusercontent.com/YAl0JYQseseoir0zkmAZwB9M3SKQTwq6O8AduKP7IpATTZ2L4nL4rFbdYRZSnFW-8cBRSKHKqppIKA5QOAsOr-Xz-iWrD1_7-iDo-B9wx5NgEZ22BTE1zlxW_TuxRDWnDuhEPxpZDyniSCWyG08VIRE)
 
 Now, we will find the schools and universities in the Derna city area. 
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - POIS\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - POIS" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Select features using an expression\" 
+    -   Click on "Select features using an expression" 
 
     -   For the input fields:
 
         -   Expression box:  "fclass"  =  'school' or  "fclass"  =  'university' 
 
--   Click on \"Select Features\"
+-   Click on "Select Features"
 
--   Following the steps shown previously, save the selected features as a GeoPackage in the \"Derna\" GeoPackage and name it \"evacuation_centres\". 
+-   Following the steps shown previously, save the selected features as a GeoPackage in the "Derna" GeoPackage and name it "evacuation_centres". 
 
 We will then convert the polygons layer into a point layer.
 
 Following the steps shown previously in 3.3.4, convert the evacuation_centres polygons into points using realcentroid. 
 
--   Save the resulting layer into the \"Derna\" GeoPackage and name it \"evacuation_centres_points\". 
+-   Save the resulting layer into the "Derna" GeoPackage and name it "evacuation_centres_points". 
 
--   Remove the \"Centroids\", \"Derna - evacuation_centres\", \"Derna - POIS\" and \"gis_osm_pois_a_free_1\" layers.
+-   Remove the "Centroids", "Derna - evacuation_centres", "Derna - POIS" and "gis_osm_pois_a_free_1" layers.
 
 \
 
@@ -628,7 +622,7 @@ Following the steps in 3.3.3, keep only the fields listed and remove all other f
 
 #### 3.4.6 Separating the Viable and Non-viable Evacuation Centres
 
-Referencing the colour-ranked DEM layer, we will separate the viable and non-viable sites from the \"evacuation_centres_points\" layer.
+Referencing the colour-ranked DEM layer, we will separate the viable and non-viable sites from the "evacuation_centres_points" layer.
 
 \
 
@@ -638,7 +632,7 @@ We will select out the evacuation centres that fall within the higher risk areas
 
 -   Navigate to: Toolbar \> Select Features by Polygon ![](https://lh7-us.googleusercontent.com/4KEfcuvNOU_DJhYDBSjIXg8kfVyPGMFATK97_bQMTJRD-ip95DlQ-_Z_7xK-tgpj_l11YaTwwtSYausXikXyb6xQbwmag4RQMyEuGaWj90lrQDhyb6lgiNj7W-vMP3eQLYTzl3EwYKsE9HSjrtcJBUA)
 
-    -   Make sure the \"evacuation_centres_points\" layer is selected in the Layers Panel.
+    -   Make sure the "evacuation_centres_points" layer is selected in the Layers Panel.
 
     -   Draw a rough polygon that selects all the points that fall within red-coloured to yellow-coloured areas, using left mouse clicks to create the points of the polygon.
 
@@ -646,7 +640,7 @@ We will select out the evacuation centres that fall within the higher risk areas
 
 ![](https://lh7-us.googleusercontent.com/gmiKlCmrMvSoGZX9Cru29pexw3lFvhBGkXEFoeWjOc9lgzzUtjH3M20U0FVtYATp0MuGOpFIGIFz4Nck2lVGF_OgPkvtqc555jtgidN_Jh1bAbxKmcfHm5Py8XgA9TfIQqPDOOEIJakv4KJ6tXaHQG4)
 
-Following the steps in 3.3.1, save the selected points into your geopackage as \"Non-viable School Sites\". 
+Following the steps in 3.3.1, save the selected points into your geopackage as "Non-viable School Sites". 
 
 -   Rename the new layer in the Layers panel to remove the name of the geopackage for tidiness.
 
@@ -656,7 +650,7 @@ Following the steps in 3.3.1, save the selected points into your geopackage as \
 
 To indicate that these initial sites are no longer considered, we will change the point symbol to a cross icon.
 
--   Navigate to: Layers Sidebar \> Right Click \"Non-viable School Sites\" \> Properties \> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Non-viable School Sites" \> Properties \> Symbology
 
     -   Under Marker, click Simple Marker
 
@@ -688,7 +682,7 @@ We will now select the remaining evacuation centres which should fall within the
 
 -   Navigate to: Toolbar \> Select Features by Polygon ![](https://lh7-us.googleusercontent.com/4KEfcuvNOU_DJhYDBSjIXg8kfVyPGMFATK97_bQMTJRD-ip95DlQ-_Z_7xK-tgpj_l11YaTwwtSYausXikXyb6xQbwmag4RQMyEuGaWj90lrQDhyb6lgiNj7W-vMP3eQLYTzl3EwYKsE9HSjrtcJBUA)
 
-    -   Make sure the \"evacuation_centres_points\" layer is selected in the Layers Panel.
+    -   Make sure the "evacuation_centres_points" layer is selected in the Layers Panel.
 
     -   Draw a rough polygon that selects all the remaining points, using left mouse clicks to create the points of the polygon.
 
@@ -696,7 +690,7 @@ We will now select the remaining evacuation centres which should fall within the
 
 ![](https://lh7-us.googleusercontent.com/gx94f-Kv0nw_i2CfP3_un4KE1sANvE7KI3gYBGofDNDa6PYiWZFZhW0WZsp158WbwZGN_gBvWMHj3YkC4AwV989CZfgw2STOuyoaolOGYSJlJxBwnlEbJGYo88c3y6IW5GKwzwZr6Lx6ObwY3XYDHrw)
 
-Following the steps in 3.3.1, save the selected points into your geopackage as \"Viable School Sites\". 
+Following the steps in 3.3.1, save the selected points into your geopackage as "Viable School Sites". 
 
 -   Rename the new layer in the Layers panel to remove the name of the geopackage for tidiness.
 
@@ -706,7 +700,7 @@ Following the steps in 3.3.1, save the selected points into your geopackage as \
 
 To indicate that these sites are suitable evacuation centres, we will change the point symbol to a shelter icon.
 
--   Navigate to: Layers Sidebar \> Right Click \"Viable School Sites\" \> Properties \> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Viable School Sites" \> Properties \> Symbology
 
     -   Under Marker, click Simple Marker
 
@@ -728,7 +722,7 @@ To indicate that these sites are suitable evacuation centres, we will change the
 
     -   Feel free to change the colours as you wish, but do ensure these icons visually distinct from the cross icons in colour
 
-From the Layers panel, uncheck the \"evacuation_centres_points\" layer to hide its visibility. Your map should look something like this:
+From the Layers panel, uncheck the "evacuation_centres_points" layer to hide its visibility. Your map should look something like this:
 
 ![](https://lh7-us.googleusercontent.com/BwAfNyjViuU6R02PPf4L91_tHxk32QBO5MzcyOxsD4UsY3oySclhopm-mJTsY3Q1FDtcGtztJXr4JP0rYUxq8SmvTpyai1lTL1_vCZSAQ_U-868ol-q_7NlwxcjB3mf46dmZQD9mP1ZvsQx38EY5gao)
 

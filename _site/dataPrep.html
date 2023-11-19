@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Saving Derna – dataprep</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Saving Derna</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./dataPrep.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Data Preperation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Report.html" rel="" target="">
+ <span class="menu-text">Methodology</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analysis.html" rel="" target="">
+ <span class="menu-text">Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./results.html" rel="" target="">
+ <span class="menu-text">Results</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./learned.html" rel="" target="">
+ <span class="menu-text">learned.html</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-preperation" id="toc-data-preperation" class="nav-link active" data-scroll-target="#data-preperation">Data Preperation</a>
+  <ul class="collapse">
+  <li><a href="#datasets-used" id="toc-datasets-used" class="nav-link" data-scroll-target="#datasets-used">Datasets Used</a>
+  <ul class="collapse">
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
+  </ul></li>
+  <li><a href="#data-preperation-1" id="toc-data-preperation-1" class="nav-link" data-scroll-target="#data-preperation-1">3.2 Data Preperation</a></li>
+  <li><a href="#importing" id="toc-importing" class="nav-link" data-scroll-target="#importing">3.2.1 Importing</a></li>
+  <li><a href="#preparing-the-openaerial-satellite-images" id="toc-preparing-the-openaerial-satellite-images" class="nav-link" data-scroll-target="#preparing-the-openaerial-satellite-images">3.2.2 Preparing the OpenAerial Satellite Images</a>
+  <ul class="collapse">
+  <li><a href="#retrieving-images-from-openaerialmap" id="toc-retrieving-images-from-openaerialmap" class="nav-link" data-scroll-target="#retrieving-images-from-openaerialmap">3.2.2.1 Retrieving images from OpenAerialMap</a></li>
+  <li><a href="#clipping-satellite-images-to-study-area" id="toc-clipping-satellite-images-to-study-area" class="nav-link" data-scroll-target="#clipping-satellite-images-to-study-area">3.2.2.2 Clipping satellite images to study area</a></li>
+  </ul></li>
+  <li><a href="#extracting-the-dem-data-from-usgs" id="toc-extracting-the-dem-data-from-usgs" class="nav-link" data-scroll-target="#extracting-the-dem-data-from-usgs">3.2.3 Extracting the DEM data from USGS</a></li>
+  </ul></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
+  <ul class="collapse">
+  <li><a href="#vector-layers" id="toc-vector-layers" class="nav-link" data-scroll-target="#vector-layers">Vector Layers</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="data-preperation" class="level1">
+<h1>Data Preperation</h1>
+<section id="datasets-used" class="level2">
+<h2 class="anchored" data-anchor-id="datasets-used">Datasets Used</h2>
+<p>To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Centres and Medical Services, we need the DEM layer of Derna, the hexagonal layer of Derna City, the OSM layer of Derna and the floor extent of Derna. These data can be obtained from the following datasets:</p>
+<ul>
+<li><p><strong>OSM data for Libya</strong></p>
+<ul>
+<li><p><strong>Format</strong>: SHP</p></li>
+<li><p><strong>Purpose</strong>: An open street map shapefile of Libya used to determine the number of buildings, schools and universities in Derna city.</p></li>
+<li><p><strong>Link</strong>: https://download.geofabrik.de/africa/libya.html</p></li>
+<li><p><strong>Note</strong>: Download the file named “libya-latest-free.shp.zip” under “Commonly Used Formats”.</p></li>
+</ul></li>
+<li><p><strong>Flood impact on Derna</strong></p>
+<ul>
+<li><p>Format: SHP</p></li>
+<li><p>Purpose: A shapefile showing the extent of Derna city that has been affected by the flood</p></li>
+<li><p>Link: https://data.humdata.org/dataset/flood-impact-assessment-in-derna-dams-east-province-libya</p></li>
+</ul></li>
+<li><p><strong>Derna Health Facilities</strong></p>
+<ul>
+<li><p>Format: Geopackage</p></li>
+<li><p>Purpose: A geopackage with the locations of health facilities in Libya</p></li>
+<li><p>Link: https://data.humdata.org/dataset/hotosm_lby_health_facilities</p></li>
+</ul></li>
+<li><p><strong>Derna Road Layer</strong></p>
+<ul>
+<li><p>Format: Geopackage</p></li>
+<li><p>Purpose: A geopackage of the roads that are located within Libya</p></li>
+<li><p>Link: https://data.humdata.org/dataset/hotosm_lby_roads</p></li>
+</ul></li>
+<li><p><strong>Derna City Hexagon Layer</strong></p>
+<ul>
+<li><p>Format: SHP</p></li>
+<li><p>Purpose: A shapefile showing Derna city classified into hexagons</p></li>
+<li><p>Link: Provided on elearn</p></li>
+</ul></li>
+<li><p><strong>30-meter Digital Elevation Model (DEM) data, taken from the Shuttle Radar Topography Mission (SRTM)</strong></p>
+<ul>
+<li><p>Format: TIFF</p></li>
+<li><p>Purpose: A raster dataset of the elevation across Derna city to assess the suitability of selected potential evacuation centres and healthcare facilities.</p></li>
+<li><p>Link: https://earthexplorer.usgs.gov/</p></li>
+<li><p>Note: You will need to create a USGS account in order to download the SRTM DEM data. Follow the steps in 3.2.3 Extracting the DEM data from USGS to retrieve the data.</p></li>
+</ul></li>
+<li><p><strong>Open aerial map of Derna</strong></p>
+<ul>
+<li><p>Format: TIFF</p></li>
+<li><p>Purpose: A raster layers used as a background for all our maps</p></li>
+<li><p>Link: https://map.openaerialmap.org/#/-18.6328125,18.47960905583197,3?_k=2un4va</p></li>
+<li><p>Note: Follow the steps in 3.2.2 to extract the satellite images for the Derna study area.</p></li>
+</ul></li>
+</ul>
+<section id="steps" class="level3">
+<h3 class="anchored" data-anchor-id="steps">Steps</h3>
+<p>Create 3 folders named “data.shp”, “geopackage” and “data.tif”</p>
+<ol type="1">
+<li><p><strong>data.shp</strong> folder</p>
+<ul>
+<li>Unzip the “libya-latest-free.shp”, “FL20230912LBY_SHP” and “Derna_city_250m_hexagon” files and put them into the folder.</li>
+</ul></li>
+<li><p><strong>data.tif</strong> folder</p>
+<ul>
+<li><p>Put the “01_07_23” and “13_09_23” TIFF files into the folder</p></li>
+<li><p>Move the “n32_e022_1arc_v3” TIFF file into the folder</p></li>
+</ul></li>
+<li><p><strong>geopackage</strong> folder</p>
+<ul>
+<li>Unzip the “hotosm_lby_health_facilities_gpkg” and “hotosm_lby_roads_gpkg” files and put them into the folder.</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="data-preperation-1" class="level2">
+<h2 class="anchored" data-anchor-id="data-preperation-1">3.2 Data Preperation</h2>
+</section>
+<section id="importing" class="level2">
+<h2 class="anchored" data-anchor-id="importing">3.2.1 Importing</h2>
+<p>Open QGIS and start a new project (Project &gt; New). Change CRS to EPSG:3197 at the bottom right. This is the CRS location of where Derna city falls under.</p>
+<p>From the browser sidebar, look for the following layer file in their respective folders and add them into layers (via double click):</p>
+<ul>
+<li><p>Derna_city_250m_hexagon</p></li>
+<li><p>PHR_20230913_FloodExtent_Derna</p></li>
+<li><p>gis_osm_buildings_a_free_1</p></li>
+<li><p>gis_osm_pois_a_free_1</p></li>
+<li><p>Health Facilities</p></li>
+<li><p>Roads (Only linestring layer)</p></li>
+<li><p>13_09_23</p></li>
+<li><p>01_07_23</p></li>
+<li><p>n32_e022_1arc_v3</p></li>
+</ul>
+</section>
+<section id="preparing-the-openaerial-satellite-images" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-the-openaerial-satellite-images">3.2.2 Preparing the OpenAerial Satellite Images</h2>
+<section id="retrieving-images-from-openaerialmap" class="level3">
+<h3 class="anchored" data-anchor-id="retrieving-images-from-openaerialmap">3.2.2.1 Retrieving images from OpenAerialMap</h3>
+<p>Go to <a href="https://openaerialmap.org/" class="uri">https://openaerialmap.org/</a> and click Start Exploring to open up the map view.<img src="https://lh7-us.googleusercontent.com/DE9-nfs-m7pmZuQREgQwQv9RNq-CuIKa9LYk7uM68rPbJv0oyaxz1W5CZbnIrHPMJdVfiEd2wIXAWYEdgLjMyUlyeSTeCDP5tWKk-eVL23D2DWcyZ2m2bx5n91MuS4NUT69hUbHBqunOZuxhyOGZOww.png" class="img-fluid"></p>
+<p>In the map page, type Derna into the search bar and click the Derna option to locate it on the map view.&nbsp;</p>
+<p>Click the gridsquare containing Derna. It should have 2 satellite images – one pre-flood taken in July 2023, and one post-flood taken in September 2023.</p>
+<p><img src="https://lh7-us.googleusercontent.com/lrlj2S_bZUIgr7rQ1Wm23nk5x1gw_19Vy74QxINCYVlh7vKIrmyIgTs0bO5N-s-fDbRI7waZywS-wM-RJyOfad2Z1JdGJjlBLx7aYcRbb3kH7_UzxXVOnmkWiY1qREQ8mKo8x9pe6kdy1D9Udh3QTaA.png" class="img-fluid"></p>
+<p>Click the thumbnail of the first image and click the download icon in the small 4-icon toolbar.&nbsp;</p>
+<p><img src="https://lh7-us.googleusercontent.com/mDyEdHcnjRmASEF4HA-XreCMrdRCe3u-aXN3u0arHecjJO67mlN9XEVBnp0EKoJghoEmN4FVFL3AhW5kEybd7u9Bp2uszAAPdNMKfUrIPdudT5WSpZhqJvCkO0xmcdRD7G2KfvgTosRKwnJofiz0zeY.png" class="img-fluid"></p>
+<p>Once downloaded, rename the file to “01_07_2023”. Move the file into its respective data folder in your project folder.</p>
+<p>Repeat this for the second satellite image, and name it “13_09_23”.</p>
+</section>
+<section id="clipping-satellite-images-to-study-area" class="level3">
+<h3 class="anchored" data-anchor-id="clipping-satellite-images-to-study-area">3.2.2.2 Clipping satellite images to study area</h3>
+<p>Import the layers using “Layer” from the top menu bar &gt; Add Layer &gt; Add Raster Layer…</p>
+<ul>
+<li><p>Under Raster dataset(s), click the three dots icon.&nbsp;</p>
+<ul>
+<li>Navigate to your data folder and select both downloaded TIFF files</li>
+</ul></li>
+<li><p>Click Add</p></li>
+</ul>
+<p>We will be clipping the satellite images extracted from OpenAerial to our study area: the hexagon map of Derna city.&nbsp;</p>
+<ul>
+<li>Navigate to: “Raster” from the top menu bar &gt; Extraction &gt; Clip Raster by Extent…</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/u73Ym0he1ECU_ygDTIHytwf3teLr1XBh3VwF2Vg88qNVR2zgPOEky3Z64EOoSzNItEskX-iCVYYXkigfXN9LTuyJkrE-LRldyHoYhRaX_7vQ78bBVuS4SrJC8pX_v31lMv0-HHHCRSWK_qaBJur_hM4.png" class="img-fluid"></p>
+<ul>
+<li><p>For the input fields, set</p>
+<ul>
+<li><p>Input layer: 13_09_23</p></li>
+<li><p>Clipping extent:</p>
+<ul>
+<li><p>Click the down arrow next to this icon <img src="https://lh7-us.googleusercontent.com/HiZf6bJ239r0iBBRGUF9Q4sQbNn541sZN9yrCAWFhFejPsTUCP6PxeBnhD6N7GD9K2VFTetNBy26Xc7Y4jfgH77vwAeoSLPeexk50Z9_qP6UqkKZebyT0DefeAio0js4JoQY7Qy6Xuutuof29f39CDk.png" class="img-fluid"></p></li>
+<li><p>Under Calculate from layer, select Derna_city_250m_hexagon</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>This should create a temporary raster layer named Clipped in your Layers panel. We will now save this as a TIFF file in our data.tif folder within our project folder.</p>
+<p>Repeat the steps above for 13_09_23 to produce the 13_09_23_clipped layer.</p>
+</section>
+</section>
+<section id="extracting-the-dem-data-from-usgs" class="level2">
+<h2 class="anchored" data-anchor-id="extracting-the-dem-data-from-usgs">3.2.3 Extracting the DEM data from USGS</h2>
+<p>Launch the <a href="https://earthexplorer.usgs.gov/">USGS website</a>. Before you can download any data set from the USGS portal, you will need to register for an account. <img src="https://lh7-us.googleusercontent.com/3v7YZyHO4dWh1-4UfUtGsND7C5l2giFQLulJLhj-uQbhKQtz8lRqWmhRYLjOv546Q-VoBv8Pypr_n74xRYN6JzQ19w48nlnWXK-VIYahctUPpZ3_3yQ6g-kQHbwQP2phx-Qp85kXlr3RpLJT2QvdsSE.png" class="img-fluid"></p>
+<p>Click on Login button located at the upper-right corner of the webpage. Complete the online registration, including verification.&nbsp;</p>
+<p>Now you should be able to download data from USGS.</p>
+<section id="selecting-the-study-area-of-derna" class="level4">
+<h4 class="anchored" data-anchor-id="selecting-the-study-area-of-derna">3.2.3.1 Selecting the study area of Derna</h4>
+<p>In the lefthand side under Search Criteria,&nbsp;</p>
+<ul>
+<li><p>Select World Features</p></li>
+<li><p>Under Feature name, type Darnah</p></li>
+<li><p>Click Show</p></li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/_35YA-9F6Uw8FMdvPWKf8rNgQMe5N-t12RvceJdKWPgqNRqPMWcqlNdm-n6MF7EaHISa37QRvO8N2XLEbOCulolxgTmakDPqAGp97jo0vyhg5w0u1Kn0rwE_ZKvZ9d7ANbvKSQMQRwPMsno-L7xdF-g.png" class="img-fluid"></p>
+<p>In the results generated, select Darnah to see the map view.</p>
+<p>Using the plus button in the upper right corner of the map, zoom in until your view is similar to this:</p>
+<p><img src="https://lh7-us.googleusercontent.com/_J1z-squJ1-i_vB3IbhBLq3YaOm24Gc5HGW1TQKQfYhCS4pduAS3nCcZEGFEqjzsBf8pN0voRnIo4Ft1MYHQdqx9xE7bcgn158-gDaMlFVm_vCH8dovpt9oIWdmvzk9HBPqXsLhzzDBrF6gpAC9C-rA.png" class="img-fluid"></p>
+<p>Select the Use Map button.</p>
+</section>
+<section id="selecting-the-dem-data-to-download" class="level4">
+<h4 class="anchored" data-anchor-id="selecting-the-dem-data-to-download">3.2.3.2 Selecting the DEM data to download</h4>
+<p>Next, we will select which data set to download. Under the Dataset tab, navigate to Digital Elevation &gt; SRTM and expand it.&nbsp;</p>
+<p>Click on the check-box in front of SRTM 1 Arc-Second Global.</p>
+<p><img src="https://lh7-us.googleusercontent.com/FsxcMzB_MvR9vrEXHhoLhMqDPpG2m0BdVDBgOABsZzSw1kmmneVtc982uF6mj74o_dHSXUgq48RaqzwvBeK0U5T-j9q0sA34OxLc6uGivulz2hzDTASZUQfhJ_HZYBSxaa7sX6r3I0azp6BS7yMsY0w.png" class="img-fluid"></p>
+</section>
+<section id="downloading-the-dem" class="level4">
+<h4 class="anchored" data-anchor-id="downloading-the-dem">3.2.3.3 Downloading the DEM</h4>
+<p>Click on the Results tab. Only 1 dataset may be available (SRTM1N32E022V3).&nbsp;</p>
+<p>At SRTM1N32E022V3 pane, click on the download icon <img src="https://lh7-us.googleusercontent.com/geIOaWuwRRrKC_F_5z37bEbUYAY9x5CPmFWDNZnfPOzY8g1W0ilH403zRr4RuzjT4fogkZXm5QTAL3_NdV0d4xKsjOQVTyJKTDMAf2udzSFUtXeUvFeMpdi8pIKW2a1EgDcgPhuC3RFOXBCLVv0ndts.png" class="img-fluid">.&nbsp;</p>
+<p>In the Download Options window, click download for the GeoTIFF 1 Arc-second option to download the DEM TIFF file.</p>
+</section>
+</section>
+</section>
+<section id="data-dictionary" class="level1">
+<h1>Data Dictionary</h1>
+<section id="vector-layers" class="level3">
+<h3 class="anchored" data-anchor-id="vector-layers">Vector Layers</h3>
+<section id="buildings" class="level4">
+<h4 class="anchored" data-anchor-id="buildings">Buildings</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Buildings</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Polygon (MultiPolygon)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>8,850</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 69%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>osm_id</td>
+<td>String</td>
+<td>OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database.</td>
+</tr>
+<tr class="even">
+<td>fclass</td>
+<td>String</td>
+<td>Class name of this feature.</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>String</td>
+<td>Name of this feature, like a street or place name.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hexagon" class="level4">
+<h4 class="anchored" data-anchor-id="hexagon">Hexagon</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Derna_city_250m_hexagon</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Polygon (MultiPolygon)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>361</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>id</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>left</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>top</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>right</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>bottom</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>PCode</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="flood-extent" class="level4">
+<h4 class="anchored" data-anchor-id="flood-extent">Flood Extent</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>flood_extent</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Polygon (MultiPolygon)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>Sensor_Dat</td>
+<td>Date</td>
+<td>The date when the data was remotely sensed.</td>
+</tr>
+<tr class="even">
+<td>Area_m2</td>
+<td>Real</td>
+<td>Area of flood extent, in square metres</td>
+</tr>
+<tr class="odd">
+<td>Area_ha</td>
+<td>Real</td>
+<td>Area of flood extent, in hectares.</td>
+</tr>
+<tr class="even">
+<td>SHAPE_Leng</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SHAPE_Area</td>
+<td>Real</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="flood-zonal-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="flood-zonal-statistics">Flood Zonal Statistics</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>flood_zonal_statistics</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Polygon (MultiPolygon)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 75%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>Sensor_Dat</td>
+<td>Date</td>
+<td>The date when the data was remotely sensed.</td>
+</tr>
+<tr class="even">
+<td>_mean</td>
+<td>Real</td>
+<td>Summary statistics of the flood extent elevation levels based on DEM</td>
+</tr>
+<tr class="odd">
+<td>_median</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>_min</td>
+<td>Real</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>_max</td>
+<td>Real</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="non-viable-school-sites" class="level4">
+<h4 class="anchored" data-anchor-id="non-viable-school-sites">Non-Viable School Sites</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Non-viable School Sites</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Point (Point)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 82%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>osm_id</td>
+<td>String</td>
+<td>OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database.</td>
+</tr>
+<tr class="even">
+<td>fclass</td>
+<td>String</td>
+<td>Class name of this feature.</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>String</td>
+<td>Name of this feature, like a street or place name.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viable-school-sites-evacuation-centres" class="level4">
+<h4 class="anchored" data-anchor-id="viable-school-sites-evacuation-centres">Viable School Sites / Evacuation Centres</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Viable School Sites/Evacuation Centres</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Point (Point)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 82%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>osm_id</td>
+<td>String</td>
+<td>OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database.</td>
+</tr>
+<tr class="even">
+<td>fclass</td>
+<td>String</td>
+<td>Class name of this feature.</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>String</td>
+<td>Name of this feature, like a street or place name.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="health-facilities" class="level4">
+<h4 class="anchored" data-anchor-id="health-facilities">Health Facilities</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Derna - HF_combined</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Point (Point)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 12%">
+<col style="width: 59%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>String</td>
+<td>Name of this feature, like a street or place name.</td>
+</tr>
+<tr class="even">
+<td>healthcare:speciality</td>
+<td>String</td>
+<td>Specialty of the health facility</td>
+</tr>
+<tr class="odd">
+<td>capacity:persons</td>
+<td>String</td>
+<td>Capacity of the health facility</td>
+</tr>
+<tr class="even">
+<td>addr:full</td>
+<td>string</td>
+<td>Address of the health facility</td>
+</tr>
+<tr class="odd">
+<td>fid_2</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="even">
+<td>name_2</td>
+<td>String</td>
+<td>Name of this feature, like a street or place name.</td>
+</tr>
+<tr class="odd">
+<td>healthcare:speciality_2</td>
+<td>String</td>
+<td>Specialty of the health facility</td>
+</tr>
+<tr class="even">
+<td>capacity:persons_2</td>
+<td>String</td>
+<td>Capacity of the health facility</td>
+</tr>
+<tr class="odd">
+<td>addr:full_2</td>
+<td>string</td>
+<td>Address of the health facility</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="population-density" class="level4">
+<h4 class="anchored" data-anchor-id="population-density">Population Density</h4>
+<table class="table">
+<caption><strong>General Information</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Derna - HF_combined</td>
+</tr>
+<tr class="even">
+<td><strong>Provider</strong></td>
+<td>ogr</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>GPKG</td>
+</tr>
+<tr class="even">
+<td><strong>Encoding</strong></td>
+<td>UTF-8</td>
+</tr>
+<tr class="odd">
+<td><strong>Geometry</strong></td>
+<td>Polygon (MultiPolygon)</td>
+</tr>
+<tr class="even">
+<td><strong>Feature Count</strong></td>
+<td>361</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Coordinate Reference System (CRS)</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>EPSG:3197 - LGD2006 / Libya TM zone 12</td>
+</tr>
+<tr class="even">
+<td><strong>Units</strong></td>
+<td>meters</td>
+</tr>
+<tr class="odd">
+<td><strong>Method</strong></td>
+<td>Transverse Mercator</td>
+</tr>
+<tr class="even">
+<td><strong>Celestial Body</strong></td>
+<td>Earth</td>
+</tr>
+<tr class="odd">
+<td><strong>Reference</strong></td>
+<td>Static (relies on a datum which is plate-fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption><strong>Fields</strong></caption>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Remarks</strong></td>
+</tr>
+<tr class="even">
+<td>fid</td>
+<td>Integer64</td>
+<td>Unique feature id to the layer</td>
+</tr>
+<tr class="odd">
+<td>NUMPOINTS</td>
+<td>Real</td>
+<td>Number of buildings in each hexagon</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
