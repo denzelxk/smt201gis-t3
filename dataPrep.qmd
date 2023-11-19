@@ -206,9 +206,9 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 # Data Dictionary
 
-### Vector Layers
+## Vector Layers
 
-#### Buildings
+### Buildings
 
 |                   |                        |
 |-------------------|------------------------|
@@ -241,7 +241,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Hexagon
+### Hexagon
 
 |                   |                         |
 |-------------------|-------------------------|
@@ -277,7 +277,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Flood Extent
+### Flood Extent
 
 |                   |                        |
 |-------------------|------------------------|
@@ -312,7 +312,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Flood Zonal Statistics
+### Flood Zonal Statistics
 
 |                   |                        |
 |-------------------|------------------------|
@@ -347,7 +347,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Non-Viable School Sites
+### Non-Viable School Sites
 
 |                   |                         |
 |-------------------|-------------------------|
@@ -380,7 +380,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Viable School Sites / Evacuation Centres
+### Viable School Sites / Evacuation Centres
 
 |                   |                                        |
 |-------------------|----------------------------------------|
@@ -413,7 +413,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Health Facilities
+### Health Facilities
 
 |                   |                     |
 |-------------------|---------------------|
@@ -452,7 +452,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 
 : **Fields**
 
-#### Population Density
+### Population Density
 
 |                   |                        |
 |-------------------|------------------------|
@@ -482,3 +482,137 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 | NUMPOINTS | Real      | Number of buildings in each hexagon |
 
 : **Fields**
+
+### Accessibility Choropleth
+
+|                   |                        |
+|-------------------|------------------------|
+| **Name**          | Derna - HF_combined    |
+| **Provider**      | ogr                    |
+| **Storage**       | GPKG                   |
+| **Encoding**      | UTF-8                  |
+| **Geometry**      | Polygon (MultiPolygon) |
+| **Feature Count** | 361                    |
+
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|              |           |                                |
+|--------------|-----------|--------------------------------|
+| **Name**     | **Type**  | **Remarks**                    |
+| fid          | Integer64 | Unique feature id to the layer |
+| combined_acc | String    | Accessibility ranking          |
+
+: **Fields**
+
+## Raster Layers / Files
+
+### DEM Clipped
+
+|                          |                                                                                                     |
+|--------------------------|-----------------------------------------------------------------------------------------------------|
+| **Name**                 | DEM_clipped                                                                                         |
+| **Provider**             | gdal                                                                                                |
+| **Extent**               | 160726.9545999999972992,3623608.3053000001236796 : 170731.5739999999932479,3629194.6093999999575317 |
+| **Width**                | 383                                                                                                 |
+| **Height**               | 132                                                                                                 |
+| **Data type**            | Int16 -- Sixteen bit signed integer                                                                 |
+| **GDAL Driver Metadata** | GeoTIFF                                                                                             |
+| **Pixel size**           | 26.12172167101829956,-30.69397857142769936                                                          |
+
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:3197 - LGD2006 / Libya TM zone 12          |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|            |                |            |               |                |
+|------------|----------------|------------|---------------|----------------|
+| **Number** | **Band**       | **NoData** | **Min**       | **Max**        |
+| 1          | Band 1: Height | -32768     | -4.0000000000 | 230.0000000000 |
+
+: **Band count = 1**
+
+### 01_07_23
+
+|                          |                                                                                                     |
+|--------------------------|-----------------------------------------------------------------------------------------------------|
+| **Name**                 | 01_07_23                                                                                            |
+| **Provider**             | gdal                                                                                                |
+| **Extent**               | 639843.7500000000000000,3614843.7500000000000000 : 665156.2500000000000000,3635156.2500000000000000 |
+| **Width**                | 82944                                                                                               |
+| **Height**               | 66560                                                                                               |
+| **Data type**            | Int16 -- Sixteen bit signed integer                                                                 |
+| **GDAL Driver Metadata** | GeoTIFF                                                                                             |
+| **Pixel size**           | 0.30517578125,-0.30517578125                                                                        |
+
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:32634 - WGS 84 / UTM zone 34N              |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|            |          |            |              |                |
+|------------|----------|------------|--------------|----------------|
+| **Number** | **Band** | **NoData** | **Min**      | **Max**        |
+| 1          | Band 1   | n/a        | 0.0000000000 | 255.0000000000 |
+| 2          | Band 2   | n/a        | 0.0000000000 | 255.0000000000 |
+| 3          | Band 3   | n/a        | 0.0000000000 | 255.0000000000 |
+| 4          | Band 4   | n/a        | 0.0000000000 | 255.0000000000 |
+
+: **Band count = 4**
+
+### 13_09_23_clipped
+
+|                          |                                                                                                     |
+|--------------------------|-----------------------------------------------------------------------------------------------------|
+| **Name**                 | 13_09_23_clipped                                                                                    |
+| **Provider**             | gdal                                                                                                |
+| **Extent**               | 648061.2182617187500000,3623545.2270507812500000 : 658092.6513671875000000,3628920.2880859375000000 |
+| **Width**                | 32871                                                                                               |
+| **Height**               | 17613                                                                                               |
+| **Data type**            | Byte -- Eight bit signed integer                                                                    |
+| **GDAL Driver Metadata** | GeoTIFF                                                                                             |
+| **Pixel size**           | 0.30517578125,-0.30517578125                                                                        |
+
+: **General Information**
+
+|                    |                                                 |
+|--------------------|-------------------------------------------------|
+| **Name**           | EPSG:32634 - WGS 84 / UTM zone 34N              |
+| **Units**          | meters                                          |
+| **Method**         | Transverse Mercator                             |
+| **Celestial Body** | Earth                                           |
+| **Reference**      | Static (relies on a datum which is plate-fixed) |
+
+: **Coordinate Reference System (CRS)**
+
+|            |          |            |              |                |
+|------------|----------|------------|--------------|----------------|
+| **Number** | **Band** | **NoData** | **Min**      | **Max**        |
+| 1          | Band 1   | n/a        | 0.0000000000 | 255.0000000000 |
+| 2          | Band 2   | n/a        | 0.0000000000 | 255.0000000000 |
+| 3          | Band 3   | n/a        | 0.0000000000 | 255.0000000000 |
+
+: **Band count = 3**

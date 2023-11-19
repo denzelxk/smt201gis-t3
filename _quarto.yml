@@ -4,6 +4,8 @@ project:
 website:
   title: "Saving Derna"
   navbar:
+  backgroud: primary
+  search: true
     left:
       - href: index.qmd
         text: Home
