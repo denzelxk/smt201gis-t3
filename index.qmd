@@ -1,13 +1,19 @@
 ---
-title: "Saving Derna: "
+title: "Saving Derna"
 format: html
 editor: visual
 ---
+
+## Overview
+
+Our project's role is to help by using our expertise in GIS to support disaster relief planning. By integrating the limited open government data and other open-source data sets, we analysed the population density of Derna's residential areas, assessed suitsbility of multiple sites for use as evacuation centers, and examinsed the service area and accessiblity of evacuation and healthcare facilities to help anticipate demand for emergency services and help optimise how responders deploy their scarce resources.
+
+#### About Derna and the Flood
+
+The City of Derna (population of 90,000) in northeastern Libya (east of Benghazi) sits on the Mediterranean Coast and is bisected by the Wadi Derna, a seasonal river protected by dams. On 10 September 2023, Storm Daniel caused a major dam collapse, displacing tens of thousands from their homes and triggering a huge humanitarian crisis.
 
 ## Saving Derna
 
 This project is for SMT201 Geographic Information Systems for Urban Planning, AY2023/24 Term 1 under Prof. Kam Tin Seong.
 
 This project was done by Dylan, Jay, and Denzel.
-
-![](_site/site_libs/images/townhall.jpeg)
