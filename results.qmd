@@ -1,6 +1,6 @@
 # Results and Discussion
 
-In conclusion, the collapse of Derna\'s dams has caused irreparable damage to Derna, with many of its citizens losing their lives as well as their homes in the catastrophe.
+In conclusion, the collapse of Derna's dams has caused irreparable damage to Derna, with many of its citizens losing their lives as well as their homes in the catastrophe.
 
 To make sure such an incident does not become a catastrophe in the future, it is imperative to ensure that Derna is well equipped to handle such floods, with proper planning of their future buildings.
 
@@ -16,6 +16,6 @@ To broaden the scope of our investigation and foster a more comprehensive call-t
 
 Firstly, the adoption of smaller hexagonal sizes for future analysis might prove to be more valuable. Given Derna's relatively compact size as a town, employing smaller hexagons offers increased precision in capturing the small details of the population distribution and flood risk, contributing to a more accurate and detailed assessment.
 
-Secondly, the use of satellite imagery and field data should be used to better increase the precision of determining whether a building is considered a residential or apartment building. By having greater accuracy in determining building type, we are then able to get a better gauge of Derna\'s population density per hexagon. This would allow for more precise and effective planning of future resources.
+Secondly, the use of satellite imagery and field data should be used to better increase the precision of determining whether a building is considered a residential or apartment building. By having greater accuracy in determining building type, we are then able to get a better gauge of Derna's population density per hexagon. This would allow for more precise and effective planning of future resources.
 
 Lastly, when considering locations of future health facilities, the north-west part of Derna should be given some consideration. Currently, the people at the north-west region of Derna lack access to these facilities and would benefit from having a health facility in the form of a clinic or hospital being built there.
