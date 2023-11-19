@@ -9,9 +9,11 @@ website:
     left:
       - dataPrep.qmd
       - Report.qmd
+        text: Methodology
       - analysis.qmd
       - results.qmd
       - learned.qmd
+        text: Lessons Learned
       - poster.qmd
     right: 
       - href: index.qmd
