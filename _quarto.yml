@@ -4,26 +4,27 @@ project:
 website:
   title: "Saving Derna"
   navbar:
-  backgroud: primary
-  search: true
+    backgroud: primary
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
       - dataPrep.qmd
       - Report.qmd
       - analysis.qmd
       - results.qmd
       - learned.qmd
+    right: 
+      - href: index.qmd
+        text: Home
+      - about.qmd
       
 format:
   html:
-    theme: cosmo
+    theme: 
+      dark: darkly
+      light: yeti
     css: styles.css
     toc: true
 
 editor: visual
 
-theme: 
-  dark: darkly
-  light: flatly
+
