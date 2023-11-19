@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Saving Derna – report</title>
+<title>Saving Derna - Methodology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./_site/site_libs/images/logo.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Saving Derna</span>
     </a>
@@ -85,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./dataPrep.html" rel="" target="">
- <span class="menu-text">Data Preperation</span></a>
+ <span class="menu-text">Data Preparation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./Report.html" rel="" target="" aria-current="page">
@@ -97,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./results.html" rel="" target="">
- <span class="menu-text">Results and Discussion</span></a>
+ <span class="menu-text">Results</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./learned.html" rel="" target="">
@@ -150,7 +153,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Methodology</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
 
 <section id="methodology" class="level1">
 <h1>Methodology</h1>
@@ -452,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Click “OK”</p></li>
 </ul>
 <p><img src="_site/site_libs/images/3.4.3_stats.png" class="img-fluid"></p>
-<p>Once you're ready, click "Run".</p>
+<p>Once you’re ready, click “Run”.</p>
 <p>Following the steps from 3.4.1, save the temporary Zonal Statistics layer into your “Derna” GeoPackage and name it “flood_zonal_statistics”. Afterwards, remove the temporary Zonal Statistics layer.</p>
 <p>We will quickly clean up the data table. Right click the “flood_zonal_statistics” layer and open its Attribute Table.&nbsp;</p>
 <ul>
@@ -678,10 +696,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Input layer: Roads</p></li>
 <li><p>Overlay layer: Derna_city_250m_hexagon</p></li>
 </ul></li>
-<li><p>Click on "Run"</p></li>
+<li><p>Click on “Run”</p></li>
 </ul></li>
-<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "roads".&nbsp;</p></li>
-<li><p>Remove the "Roads" and "Clipped" layer.</p></li>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the “Derna ’’ GeoPackage and name it”roads”.&nbsp;</p></li>
+<li><p>Remove the “Roads” and “Clipped” layer.</p></li>
 </ul>
 </section>
 <section id="extracting-health-facilities-as-points" class="level4">
@@ -689,12 +707,12 @@ ul.task-list li input[type="checkbox"] {
 <p>In this section, we will merge the health facility points and polygon layer together and show it as one point layer.</p>
 <section id="removing-points-that-fall-within-flooded-area-or-are-duplicated" class="level5">
 <h5 class="anchored" data-anchor-id="removing-points-that-fall-within-flooded-area-or-are-duplicated">3.5.2.1 Removing points that fall within flooded area or are duplicated</h5>
-<p>Upon inspecting both "Health Facilities" polygon and point layer, we realised that some points are located at the same area. As such we need to remove one of them first before merging the two layers together.</p>
+<p>Upon inspecting both “Health Facilities” polygon and point layer, we realised that some points are located at the same area. As such we need to remove one of them first before merging the two layers together.</p>
 <ul>
 <li><p>Navigate to: Toolbar &gt; Select Features by Polygon <img src="https://lh7-us.googleusercontent.com/s1d86aleaj-FvPm8AbU211H5boJMXBx3V47MvKvvJgOVgQEN-O1EIIM05jMH7ucS99OnGVgGkAjgs0mOSN-3yML0vVouFzA4lzU9s-QWCC-07Ala8W9p7i_PRLPUPrU2M8tNT4T4hklQiAgzq_IwjbE.png" class="img-fluid"></p>
 <ul>
-<li><p>Draw a rough polygon that selects all the health facility polygons that are within or near to the flooded areas, or overlap with the "Health Facilities" points layer.</p></li>
-<li><p>Make sure the "Health Facilities" polygon layer is selected.</p></li>
+<li><p>Draw a rough polygon that selects all the health facility polygons that are within or near to the flooded areas, or overlap with the “Health Facilities” points layer.</p></li>
+<li><p>Make sure the “Health Facilities” polygon layer is selected.</p></li>
 </ul></li>
 </ul>
 <p><img src="_site/site_libs/images/3.5_select_polygon.png" class="img-fluid"></p>
@@ -705,19 +723,19 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>Navigate to: Toolbar &gt; Toggle Editing <img src="https://lh7-us.googleusercontent.com/PaHtGudCsPI1TNxBHwU-Rpi_mko80cq1wf0fyoFCNZ3FJ2V_UHIaUrzZoXy39KSHj2BlYIaylAQroHW-TgMOaiJbowim-R3Na_c3m3xIa28F210OtC6hT5C6LWC-al2AQMw8tTXAMyPaq1GdmLo9CqM.png" class="img-fluid"></p>
 <ul>
-<li><p>Click on "Delete Selected" <img src="https://lh7-us.googleusercontent.com/5K34LGT1yKbCyth-TGaSqXYwhkolKwb8CIFMHgoNPeOzuwaGbFoe8jOzKiIbw7Rt3MDhJaeJfX1aZzrmLSZZNPqM17QJmmnoGLuHkOcjUA6Ov4i-ZN1Y8HxBa3ddkLkH_HtPGhxTaHvQrCGP5BK8xek.png" class="img-fluid"></p></li>
+<li><p>Click on “Delete Selected” <img src="https://lh7-us.googleusercontent.com/5K34LGT1yKbCyth-TGaSqXYwhkolKwb8CIFMHgoNPeOzuwaGbFoe8jOzKiIbw7Rt3MDhJaeJfX1aZzrmLSZZNPqM17QJmmnoGLuHkOcjUA6Ov4i-ZN1Y8HxBa3ddkLkH_HtPGhxTaHvQrCGP5BK8xek.png" class="img-fluid"></p></li>
 <li><p>Untoggle and save the edits&nbsp;</p></li>
 </ul></li>
-<li><p>Repeat the above steps for the "Health Facilities" polygon layer, removing only the points that fall within the flood extent.</p></li>
+<li><p>Repeat the above steps for the “Health Facilities” polygon layer, removing only the points that fall within the flood extent.</p></li>
 </ul>
 <p><img src="_site/site_libs/images/3.5_select_point.png" class="img-fluid"></p>
 </section>
 <section id="cleaning-up-the-data" class="level5">
 <h5 class="anchored" data-anchor-id="cleaning-up-the-data">3.5.2.2 Cleaning up the data</h5>
-<p>In this step, we need to convert the "Health Facilities" Polygon layer into a point layer and at the same time keep points that are only within the hexagonal grid.</p>
+<p>In this step, we need to convert the “Health Facilities” Polygon layer into a point layer and at the same time keep points that are only within the hexagonal grid.</p>
 <p><br>
 </p>
-<p>For the "Health Facilities" polygon layer:</p>
+<p>For the “Health Facilities” polygon layer:</p>
 <ul>
 <li><p>Navigate to: Vector &gt; Geometry Tools &gt; Centroids…</p>
 <ul>
@@ -725,7 +743,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Input layer: Health Facilities (Polygon Layer)</li>
 </ul></li>
-<li><p>Click on "Run"</p></li>
+<li><p>Click on “Run”</p></li>
 </ul></li>
 <li><p>Navigate to: Vector &gt; Research Tools &gt; Select by Location…</p>
 <ul>
@@ -745,14 +763,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <!-- -->
 <ul>
-<li>Click "Run"</li>
+<li>Click “Run”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the "Derna ’’ GeoPackage and name it "HF_polygons".&nbsp;</p></li>
-<li><p>Remove the "Centroids" and "Health Facilities" polygon layers.</p></li>
+<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the “Derna ’’ GeoPackage and name it”HF_polygons”.&nbsp;</p></li>
+<li><p>Remove the “Centroids” and “Health Facilities” polygon layers.</p></li>
 </ul>
-<p>For the "Health Facilities" points:</p>
+<p>For the “Health Facilities” points:</p>
 <ul>
 <li><p>Navigate to: Vector &gt; Research Tools &gt; Select by Location…</p>
 <ul>
@@ -772,17 +790,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <!-- -->
 <ul>
-<li>Click "Run"</li>
+<li>Click “Run”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the "Derna ’’ GeoPackage and name it "HF_points".&nbsp;</p></li>
-<li><p>Remove the "Health Facilities" point layer.</p></li>
+<li><p>Following the steps shown previously, save the selected features as a GeoPackage in the “Derna ’’ GeoPackage and name it”HF_points”.&nbsp;</p></li>
+<li><p>Remove the “Health Facilities” point layer.</p></li>
 </ul>
 </section>
 <section id="merging-both-hf-layers-together" class="level5">
-<h5 class="anchored" data-anchor-id="merging-both-hf-layers-together">3.5.2.3 Merging both "HF" layers together</h5>
-<p>In this step, we need to merge both "HF" layers together so that it can be used later for the accessibility analysis.</p>
+<h5 class="anchored" data-anchor-id="merging-both-hf-layers-together">3.5.2.3 Merging both “HF” layers together</h5>
+<p>In this step, we need to merge both “HF” layers together so that it can be used later for the accessibility analysis.</p>
 <ul>
 <li><p>Navigate to: Vector &gt; Geoprocessing Tools &gt; Union…</p>
 <ul>
@@ -795,9 +813,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_union.png" class="img-fluid"></p>
 <ul>
-<li><p>Click on "Run"</p></li>
-<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "HF_combined ’’. (Note: Uncheck the "persist layer metadata" and the "Include z-dimension" boxes, change the Geometry type to "Point" as well)</p></li>
-<li><p>Remove the "Union", "Derna - HF_polygons" and "Derna - HF_points" layers.</p></li>
+<li><p>Click on “Run”</p></li>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the “Derna ’’ GeoPackage and name it”HF_combined ’’. (Note: Uncheck the “persist layer metadata” and the “Include z-dimension” boxes, change the Geometry type to “Point” as well)</p></li>
+<li><p>Remove the “Union”, “Derna - HF_polygons” and “Derna - HF_points” layers.</p></li>
 </ul>
 </section>
 </section>
@@ -811,21 +829,21 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Input layer: Derna_city_250m_hexagon</li>
 </ul></li>
-<li><p>Click on "Run"</p></li>
+<li><p>Click on “Run”</p></li>
 </ul></li>
-<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the "Derna ’’ GeoPackage and name it "city_centroid".&nbsp;</p></li>
-<li><p>Remove the "Centroids" layer.</p></li>
+<li><p>Following the steps shown previously, save the new layer as a GeoPackage in the “Derna ’’ GeoPackage and name it”city_centroid”.&nbsp;</p></li>
+<li><p>Remove the “Centroids” layer.</p></li>
 </ul>
 </section>
 <section id="displaying-information-on-separate-choropleth-maps" class="level4">
 <h4 class="anchored" data-anchor-id="displaying-information-on-separate-choropleth-maps">3.5.4 Displaying information on separate choropleth maps</h4>
 <p>In this step, we will use the road network, the health facilities and the evacuation centres layers to create 2 separate choropleth maps to show the accessibility of health facilities and evacuation centres in relation to each individual hexagonal square in Derna city. We will also be using the plugin <strong>Qneat</strong>.</p>
-<p>Using the "HF_combined" layer as a example:</p>
+<p>Using the “HF_combined” layer as a example:</p>
 <ul>
-<li><p>Navigate to: Plugins &gt; Manage and Install Plugins… &gt; All &gt; Search for "QNEAT3" &gt; Install Plugin</p></li>
+<li><p>Navigate to: Plugins &gt; Manage and Install Plugins… &gt; All &gt; Search for “QNEAT3” &gt; Install Plugin</p></li>
 <li><p>Navigate to: Processing &gt; Toolbox &gt; Search … &gt; OD Matrix Layers as Table (m:n)</p>
 <ul>
-<li><p>Choose "OD Matrix Layers as Table (m:n)" under "QNEAT3"</p></li>
+<li><p>Choose “OD Matrix Layers as Table (m:n)” under “QNEAT3”</p></li>
 <li><p>For the input fields:</p>
 <ul>
 <li><p>Network layer: Derna - roads</p></li>
@@ -842,12 +860,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_od_matrix.png" class="img-fluid"></p>
 <ul>
-<li>Click on "Run"</li>
+<li>Click on “Run”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Following the steps shown previously, save the matrix as a GeoPackage in the "Derna ’’ GeoPackage and name it "OD_Matrix_HF ’’.&nbsp;</p></li>
-<li><p>Remove the "Output_OD_Matrix" layer.</p></li>
+<li><p>Following the steps shown previously, save the matrix as a GeoPackage in the “Derna ’’ GeoPackage and name it”OD_Matrix_HF ’’.&nbsp;</p></li>
+<li><p>Remove the “Output_OD_Matrix” layer.</p></li>
 </ul>
 <p><br>
 </p>
@@ -863,18 +881,18 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_sql.png" class="img-fluid"></p>
 <ul>
-<li><p>Click on "Execute"</p></li>
-<li><p>Tick the "Load as new layer" box</p></li>
-<li><p>Click on "Load"</p></li>
+<li><p>Click on “Execute”</p></li>
+<li><p>Tick the “Load as new layer” box</p></li>
+<li><p>Click on “Load”</p></li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Following the steps shown previously, save the matrix as a GeoPackage in the "Derna ’’ GeoPackage and name it "acc_HF ’’.&nbsp;</p></li>
-<li><p>Following the steps shown previously, <strong>save a copy</strong> of "Derna_city_250m_hexagon ’’ as a GeoPackage in the "Derna ’’ GeoPackage and name it "acc_HF_choropleth ’’.&nbsp;</p></li>
-<li><p>Remove the "OD_Matrix_HF" and "QueryLayer" layer.</p></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - acc_HF_choropleth"&gt; Properties&gt; Join</p>
+<li><p>Following the steps shown previously, save the matrix as a GeoPackage in the “Derna ’’ GeoPackage and name it”acc_HF ’’.&nbsp;</p></li>
+<li><p>Following the steps shown previously, <strong>save a copy</strong> of “Derna_city_250m_hexagon ’’ as a GeoPackage in the”Derna ’’ GeoPackage and name it “acc_HF_choropleth ’’.&nbsp;</p></li>
+<li><p>Remove the “OD_Matrix_HF” and “QueryLayer” layer.</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - acc_HF_choropleth”&gt; Properties&gt; Join</p>
 <ul>
-<li><p>Click the "+" icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
+<li><p>Click the “+” icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields</p>
 <ul>
@@ -884,14 +902,14 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Rest of the fields leave it</p></li>
 </ul></li>
 <li><p><img src="_site/site_libs/images/3.5_join.png" class="img-fluid"></p></li>
-<li><p>Click "Ok"</p></li>
-<li><p>Click "Apply"</p></li>
+<li><p>Click “Ok”</p></li>
+<li><p>Click “Apply”</p></li>
 </ul></li>
 </ul></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - acc_HF" &gt; Open Attribute Table</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right click “Derna - acc_HF” &gt; Open Attribute Table</p></li>
 <li><p>From the Attribute Table:</p>
 <ul>
-<li><p>Click on "Open field calculator" <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
+<li><p>Click on “Open field calculator” <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
@@ -901,35 +919,35 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p><img src="_site/site_libs/images/3.5_acc_HF.png" class="img-fluid"></p>
 <ul>
-<li>Click on "Ok"</li>
+<li>Click on “Ok”</li>
 </ul></li>
 </ul>
 <!-- -->
 <ul>
 <li><p>Manually change null values to 11000</p></li>
-<li><p>Click on "Toggle edits" <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
+<li><p>Click on “Toggle edits” <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
 <ul>
 <li>Save the changes made</li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - acc_HF_choropleth"&gt; Properties&gt; Symbology</p>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - acc_HF_choropleth”&gt; Properties&gt; Symbology</p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
-<li><p>Change "Single Symbol" to "Graduated"</p></li>
+<li><p>Change “Single Symbol” to “Graduated”</p></li>
 <li><p>Value: Derna - acc_HF_distance_real</p></li>
 <li><p>Mode: Natural Break (Jenks)</p></li>
 <li><p>Classes: 3</p></li>
 </ul></li>
 <li><p><img src="_site/site_libs/images/3.5_symbology.png" class="img-fluid"></p>
 <ul>
-<li><p>Click on "Ok"</p></li>
+<li><p>Click on “Ok”</p></li>
 <li><p>Take note of the values for each interval.</p></li>
 </ul></li>
 </ul></li>
 </ul>
-<p>Repeat all the steps in step 3.5.4 with the "Derna - evacuation_centre_points" layer, naming the layers appropriately and changing null values to 5000.</p>
+<p>Repeat all the steps in step 3.5.4 with the “Derna - evacuation_centre_points” layer, naming the layers appropriately and changing null values to 5000.</p>
 <p><img src="_site/site_libs/images/3.5_acc_EC.png" class="img-fluid"></p>
 <p>The values of each interval for the evacuation centres should give these values.</p>
 </section>
@@ -942,10 +960,10 @@ ul.task-list li input[type="checkbox"] {
 </p>
 <p>For Evacuation Centres:</p>
 <ul>
-<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - acc_EC" &gt; Open Attribute Table</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right click “Derna - acc_EC” &gt; Open Attribute Table</p></li>
 <li><p>From the Attribute Table:</p>
 <ul>
-<li><p>Click on "Open field calculator" <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
+<li><p>Click on “Open field calculator” <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
@@ -966,21 +984,21 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_field_calculator.png" class="img-fluid"></p>
 <ul>
-<li>Click "Ok"</li>
+<li>Click “Ok”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Click on "Toggle edits" <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
+<li><p>Click on “Toggle edits” <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
 <ul>
 <li>Save the changes made</li>
 </ul></li>
 </ul>
 <p>For Health Facilities:</p>
 <ul>
-<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - acc_HF" &gt; Open Attribute Table</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right click “Derna - acc_HF” &gt; Open Attribute Table</p></li>
 <li><p>From the Attribute Table:</p>
 <ul>
-<li><p>Click on "Open field calculator" <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
+<li><p>Click on “Open field calculator” <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
@@ -1002,11 +1020,11 @@ ul.task-list li input[type="checkbox"] {
 <br>
 </p>
 <ul>
-<li>Click "Ok"</li>
+<li>Click “Ok”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Click on "Toggle edits" <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
+<li><p>Click on “Toggle edits” <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p>
 <ul>
 <li>Save the changes made</li>
 </ul></li>
@@ -1016,10 +1034,10 @@ ul.task-list li input[type="checkbox"] {
 <h5 class="anchored" data-anchor-id="accessibility-on-a-choropleth-map">3.5.5.2 Accessibility on a choropleth map</h5>
 <p>In this step, we will join all 3 tables together to make one single choropleth map.</p>
 <ul>
-<li><p>Following the steps shown previously, <strong>save a copy</strong> of "Derna_city_250m_hexagon ’’ as a GeoPackage in the "Derna ’’ GeoPackage and name it "acc_combined_choropleth ’’.&nbsp;</p></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - acc_combined_choropleth"&gt; Properties&gt; Join</p>
+<li><p>Following the steps shown previously, <strong>save a copy</strong> of “Derna_city_250m_hexagon ’’ as a GeoPackage in the”Derna ’’ GeoPackage and name it “acc_combined_choropleth ’’.&nbsp;</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - acc_combined_choropleth”&gt; Properties&gt; Join</p>
 <ul>
-<li><p>Click the "+" icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
+<li><p>Click the “+” icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields</p>
 <ul>
@@ -1029,7 +1047,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Rest of the fields leave it</p></li>
 </ul></li>
 </ul></li>
-<li><p>Click the "+" icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
+<li><p>Click the “+” icon <img src="https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields</p>
 <ul>
@@ -1040,10 +1058,10 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul></li>
 </ul></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right click "Derna - acc_combined_choropleth" &gt; Open Attribute Table</p></li>
+<li><p>Navigate to: Layers Sidebar &gt; Right click “Derna - acc_combined_choropleth” &gt; Open Attribute Table</p></li>
 <li><p>From the Attribute Table:</p>
 <ul>
-<li><p>Click on "Open field calculator" <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
+<li><p>Click on “Open field calculator” <img src="https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14.png" class="img-fluid"></p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
@@ -1056,17 +1074,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_field_calculator2.png" class="img-fluid"></p>
 <ul>
-<li>Click "Ok"</li>
+<li>Click “Ok”</li>
 </ul>
 <!-- -->
 <ul>
-<li><p>Click on "Toggle edits" <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p></li>
+<li><p>Click on “Toggle edits” <img src="https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck.png" class="img-fluid"></p></li>
 <li><p>Save the changes made</p></li>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - acc_HF_choropleth"&gt; Properties&gt; Symbology</p>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - acc_HF_choropleth”&gt; Properties&gt; Symbology</p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>
-<li><p>Change "Single Symbol" to "Categorized"</p></li>
+<li><p>Change “Single Symbol” to “Categorized”</p></li>
 <li><p>Value: combined_acc</p></li>
 <li><p>Change the rest of fields so it looks similar to the one referenced below:</p></li>
 </ul></li>
@@ -1074,7 +1092,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="_site/site_libs/images/3.5_symbology2.png" class="img-fluid"></p>
 <ul>
-<li><p>Click on "Apply"</p></li>
+<li><p>Click on “Apply”</p></li>
 <li><p>The map should look like this:</p></li>
 </ul>
 <p><img src="_site/site_libs/images/3.5_final.png" class="img-fluid"></p>
@@ -1085,7 +1103,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In this part, we will add back the health facilities and evacuation centres as symbols to the map.</p>
 <p>Using Evacuation Centres as an example:</p>
 <ul>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - evacuation_centre_points" &gt; Properties &gt; Symbology</p>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - evacuation_centre_points” &gt; Properties &gt; Symbology</p>
 <ul>
 <li><p>Marker &gt;Simple Marker</p>
 <ul>
@@ -1114,7 +1132,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="adding-a-backdrop-1">3.5.7 Adding a backdrop</h4>
 <p>In this part, we will be adding a backdrop to the map, so that an aerial map of Derna city can be used to make the map easily associable.</p>
 <ul>
-<li><p>Navigate to: Layers Sidebar &gt; Right Click "Derna - acc_combined_choropleth"&gt; Properties&gt; Symbology</p>
+<li><p>Navigate to: Layers Sidebar &gt; Right Click “Derna - acc_combined_choropleth”&gt; Properties&gt; Symbology</p>
 <ul>
 <li><p>For the input fields:</p>
 <ul>

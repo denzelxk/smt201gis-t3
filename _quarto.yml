@@ -3,7 +3,6 @@ project:
 
 website:
   title: "Saving Derna"
-  logo: _site/site_libs/images/logo.png
   navbar:
     backgroud: primary
     search: true
@@ -11,9 +10,7 @@ website:
       - dataPrep.qmd
       - Report.qmd
       - analysis.qmd
-        text: Analysis
       - results.qmd
-        text: results
       - learned.qmd
       - poster.qmd
     right: 

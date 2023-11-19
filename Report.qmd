@@ -1,3 +1,7 @@
+---
+title: "Methodology"
+---
+
 # Methodology
 
 ## 3.3 Population Density Analysis
@@ -64,9 +68,8 @@ At this stage, we need to identify the residential and apartment buildings in De
 
         -   Expression box: "type"  =  'apartments' or  "type"  =  'residential'
 
-```{=html}
 <!-- -->
-```
+
 -   ![](_site/site_libs/images/3.3_expression.png)
 
 -   Click on "Select Features"
@@ -309,7 +312,7 @@ We will use the flood extent polygon to analyse the statistics of the flood elev
 
 ![](_site/site_libs/images/3.4.3_stats.png)
 
-Once you\'re ready, click \"Run\".
+Once you're ready, click "Run".
 
 Following the steps from 3.4.1, save the temporary Zonal Statistics layer into your "Derna" GeoPackage and name it "flood_zonal_statistics". Afterwards, remove the temporary Zonal Statistics layer.
 
@@ -547,11 +550,11 @@ In this step, we will clip the roads layer such that it only shows roads that ar
 
         -   Overlay layer: Derna_city_250m_hexagon
 
-    -   Click on \"Run\"
+    -   Click on "Run"
 
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"roads\". 
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it "roads". 
 
--   Remove the \"Roads\" and \"Clipped\" layer.
+-   Remove the "Roads" and "Clipped" layer.
 
 #### 3.5.2 Extracting Health Facilities as points
 
@@ -559,38 +562,37 @@ In this section, we will merge the health facility points and polygon layer toge
 
 ##### 3.5.2.1 Removing points that fall within flooded area or are duplicated
 
-Upon inspecting both \"Health Facilities\" polygon and point layer, we realised that some points are located at the same area. As such we need to remove one of them first before merging the two layers together.
+Upon inspecting both "Health Facilities" polygon and point layer, we realised that some points are located at the same area. As such we need to remove one of them first before merging the two layers together.
 
 -   Navigate to: Toolbar \> Select Features by Polygon ![](https://lh7-us.googleusercontent.com/s1d86aleaj-FvPm8AbU211H5boJMXBx3V47MvKvvJgOVgQEN-O1EIIM05jMH7ucS99OnGVgGkAjgs0mOSN-3yML0vVouFzA4lzU9s-QWCC-07Ala8W9p7i_PRLPUPrU2M8tNT4T4hklQiAgzq_IwjbE)
 
-    -   Draw a rough polygon that selects all the health facility polygons that are within or near to the flooded areas, or overlap with the \"Health Facilities\" points layer.
+    -   Draw a rough polygon that selects all the health facility polygons that are within or near to the flooded areas, or overlap with the "Health Facilities" points layer.
 
-    -   Make sure the \"Health Facilities\" polygon layer is selected.
+    -   Make sure the "Health Facilities" polygon layer is selected.
 
 ![](_site/site_libs/images/3.5_select_polygon.png)
 
 -   Right click to confirm the selection of features within the shape drawn
 
-```{=html}
 <!-- -->
-```
+
 -   Navigate to: Toolbar \> Toggle Editing ![](https://lh7-us.googleusercontent.com/PaHtGudCsPI1TNxBHwU-Rpi_mko80cq1wf0fyoFCNZ3FJ2V_UHIaUrzZoXy39KSHj2BlYIaylAQroHW-TgMOaiJbowim-R3Na_c3m3xIa28F210OtC6hT5C6LWC-al2AQMw8tTXAMyPaq1GdmLo9CqM)
 
-    -   Click on \"Delete Selected\" ![](https://lh7-us.googleusercontent.com/5K34LGT1yKbCyth-TGaSqXYwhkolKwb8CIFMHgoNPeOzuwaGbFoe8jOzKiIbw7Rt3MDhJaeJfX1aZzrmLSZZNPqM17QJmmnoGLuHkOcjUA6Ov4i-ZN1Y8HxBa3ddkLkH_HtPGhxTaHvQrCGP5BK8xek)
+    -   Click on "Delete Selected" ![](https://lh7-us.googleusercontent.com/5K34LGT1yKbCyth-TGaSqXYwhkolKwb8CIFMHgoNPeOzuwaGbFoe8jOzKiIbw7Rt3MDhJaeJfX1aZzrmLSZZNPqM17QJmmnoGLuHkOcjUA6Ov4i-ZN1Y8HxBa3ddkLkH_HtPGhxTaHvQrCGP5BK8xek)
 
     -   Untoggle and save the edits 
 
--   Repeat the above steps for the \"Health Facilities\" polygon layer, removing only the points that fall within the flood extent.
+-   Repeat the above steps for the "Health Facilities" polygon layer, removing only the points that fall within the flood extent.
 
 ![](_site/site_libs/images/3.5_select_point.png)
 
 ##### 3.5.2.2 Cleaning up the data
 
-In this step, we need to convert the \"Health Facilities\" Polygon layer into a point layer and at the same time keep points that are only within the hexagonal grid.
+In this step, we need to convert the "Health Facilities" Polygon layer into a point layer and at the same time keep points that are only within the hexagonal grid.
 
 \
 
-For the \"Health Facilities\" polygon layer:
+For the "Health Facilities" polygon layer:
 
 -   Navigate to: Vector \> Geometry Tools \> Centroids...
 
@@ -598,7 +600,7 @@ For the \"Health Facilities\" polygon layer:
 
         -   Input layer: Health Facilities (Polygon Layer)
 
-    -   Click on \"Run\"
+    -   Click on "Run"
 
 -   Navigate to: Vector \> Research Tools \> Select by Location...
 
@@ -614,19 +616,17 @@ For the \"Health Facilities\" polygon layer:
 
                 -   Invalid feature filtering: Do not Filter (Better Performance)
 
-```{=html}
 <!-- -->
-```
--   Click \"Run\"
 
-```{=html}
+-   Click "Run"
+
 <!-- -->
-```
--   Following the steps shown previously, save the selected features as a GeoPackage in the \"Derna '' GeoPackage and name it \"HF_polygons\". 
 
--   Remove the \"Centroids\" and \"Health Facilities\" polygon layers.
+-   Following the steps shown previously, save the selected features as a GeoPackage in the "Derna '' GeoPackage and name it "HF_polygons". 
 
-For the \"Health Facilities\" points:
+-   Remove the "Centroids" and "Health Facilities" polygon layers.
+
+For the "Health Facilities" points:
 
 -   Navigate to: Vector \> Research Tools \> Select by Location...
 
@@ -642,21 +642,19 @@ For the \"Health Facilities\" points:
 
                 -   Invalid feature filtering: Do not Filter (Better Performance)
 
-```{=html}
 <!-- -->
-```
--   Click \"Run\"
 
-```{=html}
+-   Click "Run"
+
 <!-- -->
-```
--   Following the steps shown previously, save the selected features as a GeoPackage in the \"Derna '' GeoPackage and name it \"HF_points\". 
 
--   Remove the \"Health Facilities\" point layer.
+-   Following the steps shown previously, save the selected features as a GeoPackage in the "Derna '' GeoPackage and name it "HF_points". 
 
-##### 3.5.2.3 Merging both \"HF\" layers together
+-   Remove the "Health Facilities" point layer.
 
-In this step, we need to merge both \"HF\" layers together so that it can be used later for the accessibility analysis.
+##### 3.5.2.3 Merging both "HF" layers together
+
+In this step, we need to merge both "HF" layers together so that it can be used later for the accessibility analysis.
 
 -   Navigate to: Vector \> Geoprocessing Tools \> Union...
 
@@ -668,11 +666,11 @@ In this step, we need to merge both \"HF\" layers together so that it can be use
 
 ![](_site/site_libs/images/3.5_union.png)
 
--   Click on \"Run\"
+-   Click on "Run"
 
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"HF_combined ''. (Note: Uncheck the \"persist layer metadata\" and the \"Include z-dimension\" boxes, change the Geometry type to \"Point\" as well)
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it "HF_combined ''. (Note: Uncheck the "persist layer metadata" and the "Include z-dimension" boxes, change the Geometry type to "Point" as well)
 
--   Remove the \"Union\", \"Derna - HF_polygons\" and \"Derna - HF_points\" layers.
+-   Remove the "Union", "Derna - HF_polygons" and "Derna - HF_points" layers.
 
 #### 3.5.3 Getting hexagonal layer centroid
 
@@ -684,23 +682,23 @@ In this step, we need to get the centre of each hexagonal piece of the Derna cit
 
         -   Input layer: Derna_city_250m_hexagon
 
-    -   Click on \"Run\"
+    -   Click on "Run"
 
--   Following the steps shown previously, save the new layer as a GeoPackage in the \"Derna '' GeoPackage and name it \"city_centroid\". 
+-   Following the steps shown previously, save the new layer as a GeoPackage in the "Derna '' GeoPackage and name it "city_centroid". 
 
--   Remove the \"Centroids\" layer.
+-   Remove the "Centroids" layer.
 
 #### 3.5.4 Displaying information on separate choropleth maps
 
 In this step, we will use the road network, the health facilities and the evacuation centres layers to create 2 separate choropleth maps to show the accessibility of health facilities and evacuation centres in relation to each individual hexagonal square in Derna city. We will also be using the plugin **Qneat**.
 
-Using the \"HF_combined\" layer as a example:
+Using the "HF_combined" layer as a example:
 
--   Navigate to: Plugins \> Manage and Install Plugins... \> All \> Search for \"QNEAT3\" \> Install Plugin
+-   Navigate to: Plugins \> Manage and Install Plugins... \> All \> Search for "QNEAT3" \> Install Plugin
 
 -   Navigate to: Processing \> Toolbox \> Search ... \> OD Matrix Layers as Table (m:n)
 
-    -   Choose \"OD Matrix Layers as Table (m:n)\" under \"QNEAT3\"
+    -   Choose "OD Matrix Layers as Table (m:n)" under "QNEAT3"
 
     -   For the input fields:
 
@@ -724,14 +722,13 @@ Using the \"HF_combined\" layer as a example:
 
 ![](_site/site_libs/images/3.5_od_matrix.png)
 
--   Click on \"Run\"
+-   Click on "Run"
 
-```{=html}
 <!-- -->
-```
--   Following the steps shown previously, save the matrix as a GeoPackage in the \"Derna '' GeoPackage and name it \"OD_Matrix_HF ''. 
 
--   Remove the \"Output_OD_Matrix\" layer.
+-   Following the steps shown previously, save the matrix as a GeoPackage in the "Derna '' GeoPackage and name it "OD_Matrix_HF ''. 
+
+-   Remove the "Output_OD_Matrix" layer.
 
 \
 
@@ -745,24 +742,23 @@ Using the \"HF_combined\" layer as a example:
 
 ![](_site/site_libs/images/3.5_sql.png)
 
--   Click on \"Execute\"
+-   Click on "Execute"
 
--   Tick the \"Load as new layer\" box
+-   Tick the "Load as new layer" box
 
--   Click on \"Load\"
+-   Click on "Load"
 
-```{=html}
 <!-- -->
-```
--   Following the steps shown previously, save the matrix as a GeoPackage in the \"Derna '' GeoPackage and name it \"acc_HF ''. 
 
--   Following the steps shown previously, **save a copy** of \"Derna_city_250m_hexagon '' as a GeoPackage in the \"Derna '' GeoPackage and name it \"acc_HF_choropleth ''. 
+-   Following the steps shown previously, save the matrix as a GeoPackage in the "Derna '' GeoPackage and name it "acc_HF ''. 
 
--   Remove the \"OD_Matrix_HF\" and \"QueryLayer\" layer.
+-   Following the steps shown previously, **save a copy** of "Derna_city_250m_hexagon '' as a GeoPackage in the "Derna '' GeoPackage and name it "acc_HF_choropleth ''. 
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - acc_HF_choropleth\"\> Properties\> Join
+-   Remove the "OD_Matrix_HF" and "QueryLayer" layer.
 
-    -   Click the \"+\" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
+-   Navigate to: Layers Sidebar \> Right Click "Derna - acc_HF_choropleth"\> Properties\> Join
+
+    -   Click the "+" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
 
         -   For the input fields
 
@@ -776,15 +772,15 @@ Using the \"HF_combined\" layer as a example:
 
         -   ![](_site/site_libs/images/3.5_join.png)
 
-        -   Click \"Ok\"
+        -   Click "Ok"
 
-        -   Click \"Apply\"
+        -   Click "Apply"
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - acc_HF\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - acc_HF" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Open field calculator\" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
+    -   Click on "Open field calculator" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
 
         -   For the input fields:
 
@@ -796,22 +792,21 @@ Using the \"HF_combined\" layer as a example:
 
         -   ![](_site/site_libs/images/3.5_acc_HF.png)
 
-            -   Click on \"Ok\"
+            -   Click on "Ok"
 
-        ```{=html}
         <!-- -->
-        ```
+
         -   Manually change null values to 11000
 
-        -   Click on \"Toggle edits\" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
+        -   Click on "Toggle edits" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
 
             -   Save the changes made
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - acc_HF_choropleth\"\> Properties\> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - acc_HF_choropleth"\> Properties\> Symbology
 
     -   For the input fields:
 
-        -   Change \"Single Symbol\" to \"Graduated\"
+        -   Change "Single Symbol" to "Graduated"
 
         -   Value: Derna - acc_HF_distance_real
 
@@ -821,11 +816,11 @@ Using the \"HF_combined\" layer as a example:
 
     -   ![](_site/site_libs/images/3.5_symbology.png)
 
-        -   Click on \"Ok\"
+        -   Click on "Ok"
 
         -   Take note of the values for each interval.
 
-Repeat all the steps in step 3.5.4 with the \"Derna - evacuation_centre_points\" layer, naming the layers appropriately and changing null values to 5000.
+Repeat all the steps in step 3.5.4 with the "Derna - evacuation_centre_points" layer, naming the layers appropriately and changing null values to 5000.
 
 ![](_site/site_libs/images/3.5_acc_EC.png)
 
@@ -841,11 +836,11 @@ In this step, we will categorise the accessibility of  health facilities and ev
 
 For Evacuation Centres:
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - acc_EC\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - acc_EC" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Open field calculator\" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
+    -   Click on "Open field calculator" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
 
         -   For the input fields:
 
@@ -867,22 +862,21 @@ For Evacuation Centres:
 
 ![](_site/site_libs/images/3.5_field_calculator.png)
 
--   Click \"Ok\"
+-   Click "Ok"
 
-```{=html}
 <!-- -->
-```
--   Click on \"Toggle edits\" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
+
+-   Click on "Toggle edits" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
 
     -   Save the changes made
 
 For Health Facilities:
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - acc_HF\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - acc_HF" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Open field calculator\" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
+    -   Click on "Open field calculator" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
 
         -   For the input fields:
 
@@ -905,12 +899,11 @@ For Health Facilities:
 \
 \
 
--   Click \"Ok\"
+-   Click "Ok"
 
-```{=html}
 <!-- -->
-```
--   Click on \"Toggle edits\" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
+
+-   Click on "Toggle edits" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
 
     -   Save the changes made
 
@@ -918,11 +911,11 @@ For Health Facilities:
 
 In this step, we will join all 3 tables together to make one single choropleth map.
 
--   Following the steps shown previously, **save a copy** of \"Derna_city_250m_hexagon '' as a GeoPackage in the \"Derna '' GeoPackage and name it \"acc_combined_choropleth ''. 
+-   Following the steps shown previously, **save a copy** of "Derna_city_250m_hexagon '' as a GeoPackage in the "Derna '' GeoPackage and name it "acc_combined_choropleth ''. 
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - acc_combined_choropleth\"\> Properties\> Join
+-   Navigate to: Layers Sidebar \> Right Click "Derna - acc_combined_choropleth"\> Properties\> Join
 
-    -   Click the \"+\" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
+    -   Click the "+" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
 
         -   For the input fields
 
@@ -934,7 +927,7 @@ In this step, we will join all 3 tables together to make one single choropleth m
 
             -   Rest of the fields leave it
 
-    -   Click the \"+\" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
+    -   Click the "+" icon ![](https://lh7-us.googleusercontent.com/p1o7tylQbHZl4qwZYolkixuCw821ffN1jJkIwTAfmQowx7hGz1T3I5bCoge657vxyle7Ii3akP9OG5Plw2_fA48Yg2YYD38CFPytFtqacfcc7VRO9mcgw_oOq7SGHmwdzTh0OzU0SGZZN1SRPuitEpE)
 
         -   For the input fields
 
@@ -946,11 +939,11 @@ In this step, we will join all 3 tables together to make one single choropleth m
 
             -   Rest of the fields leave it
 
--   Navigate to: Layers Sidebar \> Right click \"Derna - acc_combined_choropleth\" \> Open Attribute Table
+-   Navigate to: Layers Sidebar \> Right click "Derna - acc_combined_choropleth" \> Open Attribute Table
 
 -   From the Attribute Table:
 
-    -   Click on \"Open field calculator\" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
+    -   Click on "Open field calculator" ![](https://lh7-us.googleusercontent.com/fdRQUIYxLmJ0srkcHKEAGwUmUD0x2xsC4igwNhWq2mCQJvumxhOk5gyjxI-gUQFr0qDyzrwukSchVJUxqu1IdsKdLR-hd7zG8j80ac25wxx9qUI5tcFVYSq2nNL3nBk99fUjRNCnPr-gv6yPSkJwI14)
 
         -   For the input fields:
 
@@ -962,20 +955,19 @@ In this step, we will join all 3 tables together to make one single choropleth m
 
 ![](_site/site_libs/images/3.5_field_calculator2.png)
 
--   Click \"Ok\"
+-   Click "Ok"
 
-```{=html}
 <!-- -->
-```
--   Click on \"Toggle edits\" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
+
+-   Click on "Toggle edits" ![](https://lh7-us.googleusercontent.com/cGRjl89IBazqzRJVDt-3kYa-oBP3aMS6j-1t7gr9wZA4M1QwHBogga_VbV21HMgK_SNVSyIKSzBmN0Cmx-7TGC5P868NzIi7pV6MBCkh3JrBMIBp4cYViMngv8-CZutefHZgNCDj3ANRT9Ck6qzZYck)
 
 -   Save the changes made
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - acc_HF_choropleth\"\> Properties\> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - acc_HF_choropleth"\> Properties\> Symbology
 
     -   For the input fields:
 
-        -   Change \"Single Symbol\" to \"Categorized\"
+        -   Change "Single Symbol" to "Categorized"
 
         -   Value: combined_acc
 
@@ -983,7 +975,7 @@ In this step, we will join all 3 tables together to make one single choropleth m
 
 ![](_site/site_libs/images/3.5_symbology2.png)
 
--   Click on \"Apply\"
+-   Click on "Apply"
 
 -   The map should look like this:
 
@@ -995,7 +987,7 @@ In this part, we will add back the health facilities and evacuation centres as s
 
 Using Evacuation Centres as an example:
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - evacuation_centre_points\" \> Properties \> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - evacuation_centre_points" \> Properties \> Symbology
 
     -   Marker \>Simple Marker
 
@@ -1025,7 +1017,7 @@ Using Evacuation Centres as an example:
 
 In this part, we will be adding a backdrop to the map, so that an aerial map of Derna city can be used to make the map easily associable.
 
--   Navigate to: Layers Sidebar \> Right Click \"Derna - acc_combined_choropleth\"\> Properties\> Symbology
+-   Navigate to: Layers Sidebar \> Right Click "Derna - acc_combined_choropleth"\> Properties\> Symbology
 
     -   For the input fields:
 

@@ -1,3 +1,9 @@
+---
+title: "Data Preparation"
+format: html
+editor: visual
+---
+
 # Data Preperation
 
 ## Datasets Used
@@ -246,7 +252,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 : **Coordinate Reference System (CRS)**
 
 |          |           |                                                                                                 |
-|-----------|-----------|--------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | **Name** | **Type**  | **Remarks**                                                                                     |
 | fid      | Integer64 | Unique feature id to the layer                                                                  |
 | osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
@@ -350,7 +356,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 : **Coordinate Reference System (CRS)**
 
 |            |           |                                                                      |
-|------------|-----------|----------------------------------------------------------------------|
+|-------------|-------------|-----------------------------------------------|
 | **Name**   | **Type**  | **Remarks**                                                          |
 | fid        | Integer64 | Unique feature id to the layer                                       |
 | Sensor_Dat | Date      | The date when the data was remotely sensed.                          |
@@ -385,7 +391,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 : **Coordinate Reference System (CRS)**
 
 |          |           |                                                                                                 |
-|----------|-----------|-------------------------------------------------------------------------------------------------|
+|-----------|-----------|--------------------------------------------------|
 | **Name** | **Type**  | **Remarks**                                                                                     |
 | fid      | Integer64 | Unique feature id to the layer                                                                  |
 | osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
@@ -418,7 +424,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 : **Coordinate Reference System**
 
 |          |           |                                                                                                 |
-|----------|-----------|-------------------------------------------------------------------------------------------------|
+|-----------|-----------|--------------------------------------------------|
 | **Name** | **Type**  | **Remarks**                                                                                     |
 | fid      | Integer64 | Unique feature id to the layer                                                                  |
 | osm_id   | String    | OSM Id taken from the Id of this feature (node_id, way_id, or relation_id) in the OSM database. |
@@ -451,7 +457,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 : **Coordinate Reference System (CRS)**
 
 |                         |           |                                                    |
-|-------------------------|-----------|----------------------------------------------------|
+|------------------|----------------|---------------------------------------|
 | **Name**                | **Type**  | **Remarks**                                        |
 | fid                     | Integer64 | Unique feature id to the layer                     |
 | name                    | String    | Name of this feature, like a street or place name. |
@@ -533,7 +539,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 ### DEM Clipped
 
 |                          |                                                                                                     |
-|--------------------------|-----------------------------------------------------------------------------------------------------|
+|-----------------|-------------------------------------------------------|
 | **Name**                 | DEM_clipped                                                                                         |
 | **Provider**             | gdal                                                                                                |
 | **Extent**               | 160726.9545999999972992,3623608.3053000001236796 : 170731.5739999999932479,3629194.6093999999575317 |
@@ -565,7 +571,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 ### 01_07_23
 
 |                          |                                                                                                     |
-|--------------------------|-----------------------------------------------------------------------------------------------------|
+|-----------------|-------------------------------------------------------|
 | **Name**                 | 01_07_23                                                                                            |
 | **Provider**             | gdal                                                                                                |
 | **Extent**               | 639843.7500000000000000,3614843.7500000000000000 : 665156.2500000000000000,3635156.2500000000000000 |
@@ -600,7 +606,7 @@ In the Download Options window, click download for the GeoTIFF 1 Arc-second opti
 ### 13_09_23_clipped
 
 |                          |                                                                                                     |
-|--------------------------|-----------------------------------------------------------------------------------------------------|
+|-----------------|-------------------------------------------------------|
 | **Name**                 | 13_09_23_clipped                                                                                    |
 | **Provider**             | gdal                                                                                                |
 | **Extent**               | 648061.2182617187500000,3623545.2270507812500000 : 658092.6513671875000000,3628920.2880859375000000 |
