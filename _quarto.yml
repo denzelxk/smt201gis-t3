@@ -12,6 +12,7 @@ website:
       - analysis.qmd
       - results.qmd
       - learned.qmd
+      - poster.qmd
     right: 
       - href: index.qmd
         text: Home
