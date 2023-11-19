@@ -1,1 +1,31 @@
-## Analysis
+## Analysis of Results
+
+![](_site/site_libs/images/population_density.pdf)
+
+For the population density map, we used residential and apartment buildings as a gauge for the population density of Derna falls under. For buildings that were unclassified, we took a look at the satellite imagery of Derna and found a building that was classified as a residential/apartment building and used its area as a gauge to classify the unclassified buildings as residential/apartment buildings or not.
+
+The choropleth map provides an insight into the distribution of Derna's population in relation to flood risk areas, highlighting a significant concentration of residents in close proximity to the coastline, within areas susceptible to flooding. This spatial pattern shows the urgency and importance of strategic planning for potential flood-related emergencies in the region.
+
+In the event of a flood, it is imperative to allocate resources effectively. The map can serve as a valuable guide in determining the allocation of resources for evacuation and disaster preparedness. It is crucial to prioritise areas with darker shaded hexagons. These areas necessitate a more substantial allocation of resources, including emergency response teams, evacuation routes and relief supplies, to ensure the safety and well-being of a greater proportion of the population.
+
+![](_site/site_libs/images/Site_Suitability.pdf)
+
+![](https://lh7-us.googleusercontent.com/2Rz0Sr7Nis_8rselsAuz9RWqi7rjQcJ4UDOUVyxBsVxll8IUoBy-HO7NHh8DjbBEySnTj25ziWnU2xvk3YUPOB93ZCsoykf-MHBk5L_ozBgTzDIC4aznqviBEbziLpdklKPVYqMBWjb18xE_I50jyGA)
+
+In Derna\'s context as a small rural town, repurposing existing buildings as evacuation centres is a more practical option to building permanent shelters -- which may be costly and are largely space-inefficient. Schools and universities were thus chosen as primary evacuation centres, as they tend to have large sheltered halls which minimises the extra effort to protect from weather conditions, and sanitation amenities are already installed in the buildings for convenience and maintaining hygiene. 
+
+\
+
+However, the sites have to be assessed for their risk of being flooded to ascertain that they will be fit as evacuation centres. As Derna is a generally low-lying city with large areas of flatland near its coastal edge, we decided to rank the suitability of areas for evacuation and safety based on elevation level. 
+
+By retrieving Derna\'s Digital Elevation Model (DEM) and using QGIS\'s Zonal Statistics raster analysis function, we extracted the summary statistics of elevation within the flood extent area (with reference to the DEM). We then used these values to rank the flood risk of different elevation levels across Derna as seen in the map above. 
+
+Red areas are the lowest-lying coastal areas which are most likely to be affected by future floods based on the previous flood level. Green and blue areas further inland have higher elevation and thus are less prone to flooding, making them safer and better suited as evacuation centres to house the displaced population. Hence, based on visual analysis of the rank-coloured DEM layer, we eliminated school buildings that were within the highest areas of risk (denoted by red areas). We also eliminated venues that were moderately affected (denoted by yellow areas) to account for any unforeseen rises in future flood levels.
+
+This leaves 14 viable school sites for the displaced residents, covering both areas on the north and south sides of the Wadi Derna main river (seen denoted as the yellow stream cutting through Derna). Given that the sites should be able to avoid major infrastructural damage from flooding due to being on higher land, the functioning amenities, sanitation, and shelter would greatly aid displaced residents in recovering as they wait for the flood to recede and return to their homes. 
+
+![](_site/site_libs/images/accessibility.pdf)
+
+The accessibility choropleth was intended for usage one or two days after flooding hit Derna city. As such, while using QNEAT3, we assumed that the flooding would have decreased by then and the road network in the flooded area is usable. Furthermore, we used the shortest distance in the OD Matrix as we assumed that as this is a time of emergency, vehicles should be able to travel as fast as they would want to reach the health facilities or evacuation centres and as such, we chose to neglect the speed limit of these roads. Lastly, we chose to give a higher priority to health care facilities as compared to evacuation centres when creating the final ranking of accessibility. This is because we placed more importance on getting people the medical attention they needed as compared to getting people to shelters when their houses were destroyed. 
+
+The accessibility landscape in Derna city predominantly exhibits a moderate level of accessibility, with specific regions facing notably lower degrees of accessibility to healthcare facilities and evacuation centres. Recognizing the unique challenges these moderately low-accessibility areas pose, we emphasise the importance of allocating additional resources to address their specific needs. This includes ensuring adequate resources for the accommodation and care of individuals in evacuation centres and health facilities located in proximity to the flood-prone zones. In this holistic approach to disaster preparedness, the ultimate goal is to safeguard the well-being of the community and enhance its resilience in the face of potential flooding events.
