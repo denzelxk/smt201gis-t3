@@ -6,9 +6,9 @@ editor: visual
 
 ## Saving Derna
 
+This project is for SMT201 Geographic Information Systems for Urban Planning, AY2023/24 Term 1 under Prof. Kam Tin Seong.
 
-
-Dylan, Jay, Denzel
+This project was done by Dylan, Jay, and Denzel.
 
 ## Overview
 
