@@ -10,7 +10,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   **Purpose**: An open street map shapefile of Libya used to determine the number of buildings, schools and universities in Derna city.
 
-    -   **Link**: https://download.geofabrik.de/africa/libya.html
+    -   **Link**: <https://download.geofabrik.de/africa/libya.html>
 
     -   **Note**: Download the file named "libya-latest-free.shp.zip" under "Commonly Used Formats".
 
@@ -20,7 +20,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Purpose: A shapefile showing the extent of Derna city that has been affected by the flood
 
-    -   Link: https://data.humdata.org/dataset/flood-impact-assessment-in-derna-dams-east-province-libya
+    -   Link: <https://data.humdata.org/dataset/flood-impact-assessment-in-derna-dams-east-province-libya>
 
 -   **Derna Health Facilities**
 
@@ -28,7 +28,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Purpose: A geopackage with the locations of health facilities in Libya
 
-    -   Link: https://data.humdata.org/dataset/hotosm_lby_health_facilities
+    -   Link: <https://data.humdata.org/dataset/hotosm_lby_health_facilities>
 
 -   **Derna Road Layer**
 
@@ -36,7 +36,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Purpose: A geopackage of the roads that are located within Libya
 
-    -   Link: https://data.humdata.org/dataset/hotosm_lby_roads
+    -   Link: <https://data.humdata.org/dataset/hotosm_lby_roads>
 
 -   **Derna City Hexagon Layer**
 
@@ -52,7 +52,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Purpose: A raster dataset of the elevation across Derna city to assess the suitability of selected potential evacuation centres and healthcare facilities.
 
-    -   Link: https://earthexplorer.usgs.gov/
+    -   Link: <https://earthexplorer.usgs.gov/>
 
     -   Note: You will need to create a USGS account in order to download the SRTM DEM data. Follow the steps in 3.2.3 Extracting the DEM data from USGS to retrieve the data.
 
@@ -62,7 +62,7 @@ To apply GIS-based Accessibility Analysis and Mapping of Emergency Evacuation Ce
 
     -   Purpose: A raster layers used as a background for all our maps
 
-    -   Link: https://map.openaerialmap.org/#/-18.6328125,18.47960905583197,3?\_k=2un4va
+    -   Link: <https://map.openaerialmap.org/#/-18.6328125,18.47960905583197,3?_k=2un4va>
 
     -   Note: Follow the steps in 3.2.2 to extract the satellite images for the Derna study area.
 
@@ -74,15 +74,19 @@ Create 3 folders named "data.shp", "geopackage" and "data.tif"
 
     -   Unzip the "libya-latest-free.shp", "FL20230912LBY_SHP" and "Derna_city_250m_hexagon" files and put them into the folder.
 
-2.  **data.tif** folder
+![](_site/site_libs/images/data_prep_shp.png){width="676"}
+
+1.  **data.tif** folder
 
     -   Put the "01_07_23" and "13_09_23" TIFF files into the folder
 
     -   Move the "n32_e022_1arc_v3" TIFF file into the folder
 
-3.  **geopackage** folder
+2.  **geopackage** folder
 
     -   Unzip the "hotosm_lby_health_facilities_gpkg" and "hotosm_lby_roads_gpkg" files and put them into the folder.
+
+![](_site/site_libs/images/data_prep_geopackage.png){width="676"}
 
 ## 3.2 Data Preperation
 
@@ -114,17 +118,19 @@ From the browser sidebar, look for the following layer file in their respective 
 
 ### 3.2.2.1 Retrieving images from OpenAerialMap
 
-Go to <https://openaerialmap.org/> and click Start Exploring to open up the map view.![](https://lh7-us.googleusercontent.com/DE9-nfs-m7pmZuQREgQwQv9RNq-CuIKa9LYk7uM68rPbJv0oyaxz1W5CZbnIrHPMJdVfiEd2wIXAWYEdgLjMyUlyeSTeCDP5tWKk-eVL23D2DWcyZ2m2bx5n91MuS4NUT69hUbHBqunOZuxhyOGZOww)
+Go to <https://openaerialmap.org/> and click Start Exploring to open up the map view.
+
+![](_site/site_libs/images/3.2.2_homepage.png){width="1000"}
 
 In the map page, type Derna into the search bar and click the Derna option to locate it on the map view. 
 
 Click the gridsquare containing Derna. It should have 2 satellite images -- one pre-flood taken in July 2023, and one post-flood taken in September 2023.
 
-![](https://lh7-us.googleusercontent.com/lrlj2S_bZUIgr7rQ1Wm23nk5x1gw_19Vy74QxINCYVlh7vKIrmyIgTs0bO5N-s-fDbRI7waZywS-wM-RJyOfad2Z1JdGJjlBLx7aYcRbb3kH7_UzxXVOnmkWiY1qREQ8mKo8x9pe6kdy1D9Udh3QTaA)
+![](_site/site_libs/images/3.2.2_oammap.png){width="1000"}
 
 Click the thumbnail of the first image and click the download icon in the small 4-icon toolbar. 
 
-![](https://lh7-us.googleusercontent.com/mDyEdHcnjRmASEF4HA-XreCMrdRCe3u-aXN3u0arHecjJO67mlN9XEVBnp0EKoJghoEmN4FVFL3AhW5kEybd7u9Bp2uszAAPdNMKfUrIPdudT5WSpZhqJvCkO0xmcdRD7G2KfvgTosRKwnJofiz0zeY)
+![](_site/site_libs/images/3.2.2_thumbnail.png)
 
 Once downloaded, rename the file to "01_07_2023". Move the file into its respective data folder in your project folder.
 
@@ -144,7 +150,7 @@ We will be clipping the satellite images extracted from OpenAerial to our study 
 
 -   Navigate to: "Raster" from the top menu bar \> Extraction \> Clip Raster by Extent...
 
-![](https://lh7-us.googleusercontent.com/u73Ym0he1ECU_ygDTIHytwf3teLr1XBh3VwF2Vg88qNVR2zgPOEky3Z64EOoSzNItEskX-iCVYYXkigfXN9LTuyJkrE-LRldyHoYhRaX_7vQ78bBVuS4SrJC8pX_v31lMv0-HHHCRSWK_qaBJur_hM4)
+![](_site/site_libs/images/3.2.2_rasterextract.png)
 
 -   For the input fields, set
 
@@ -152,9 +158,11 @@ We will be clipping the satellite images extracted from OpenAerial to our study 
 
     -   Clipping extent:
 
-        -   Click the down arrow next to this icon ![](https://lh7-us.googleusercontent.com/HiZf6bJ239r0iBBRGUF9Q4sQbNn541sZN9yrCAWFhFejPsTUCP6PxeBnhD6N7GD9K2VFTetNBy26Xc7Y4jfgH77vwAeoSLPeexk50Z9_qP6UqkKZebyT0DefeAio0js4JoQY7Qy6Xuutuof29f39CDk)
+        -   Click the down arrow next to the pointer icon
 
         -   Under Calculate from layer, select Derna_city_250m_hexagon
+
+        -   ![](_site/site_libs/images/3.2.2_calc.png)
 
 This should create a temporary raster layer named Clipped in your Layers panel. We will now save this as a TIFF file in our data.tif folder within our project folder.
 
@@ -162,7 +170,9 @@ Repeat the steps above for 13_09_23 to produce the 13_09_23_clipped layer.
 
 ## 3.2.3 Extracting the DEM data from USGS
 
-Launch the [USGS website](https://earthexplorer.usgs.gov/). Before you can download any data set from the USGS portal, you will need to register for an account. ![](https://lh7-us.googleusercontent.com/3v7YZyHO4dWh1-4UfUtGsND7C5l2giFQLulJLhj-uQbhKQtz8lRqWmhRYLjOv546Q-VoBv8Pypr_n74xRYN6JzQ19w48nlnWXK-VIYahctUPpZ3_3yQ6g-kQHbwQP2phx-Qp85kXlr3RpLJT2QvdsSE)
+Launch the [USGS website](https://earthexplorer.usgs.gov/). Before you can download any data set from the USGS portal, you will need to register for an account.
+
+![](_site/site_libs/images/3.2.3_login.png)
 
 Click on Login button located at the upper-right corner of the webpage. Complete the online registration, including verification. 
 
@@ -178,13 +188,13 @@ In the lefthand side under Search Criteria, 
 
 -   Click Show
 
-![](https://lh7-us.googleusercontent.com/_35YA-9F6Uw8FMdvPWKf8rNgQMe5N-t12RvceJdKWPgqNRqPMWcqlNdm-n6MF7EaHISa37QRvO8N2XLEbOCulolxgTmakDPqAGp97jo0vyhg5w0u1Kn0rwE_ZKvZ9d7ANbvKSQMQRwPMsno-L7xdF-g)
+![](_site/site_libs/images/3.2.3_search.png)
 
 In the results generated, select Darnah to see the map view.
 
 Using the plus button in the upper right corner of the map, zoom in until your view is similar to this:
 
-![](https://lh7-us.googleusercontent.com/_J1z-squJ1-i_vB3IbhBLq3YaOm24Gc5HGW1TQKQfYhCS4pduAS3nCcZEGFEqjzsBf8pN0voRnIo4Ft1MYHQdqx9xE7bcgn158-gDaMlFVm_vCH8dovpt9oIWdmvzk9HBPqXsLhzzDBrF6gpAC9C-rA)
+![](_site/site_libs/images/3.2.3_derna.png)
 
 Select the Use Map button.
 
@@ -194,7 +204,7 @@ Next, we will select which data set to download. Under the Dataset tab, navigate
 
 Click on the check-box in front of SRTM 1 Arc-Second Global.
 
-![](https://lh7-us.googleusercontent.com/FsxcMzB_MvR9vrEXHhoLhMqDPpG2m0BdVDBgOABsZzSw1kmmneVtc982uF6mj74o_dHSXUgq48RaqzwvBeK0U5T-j9q0sA34OxLc6uGivulz2hzDTASZUQfhJ_HZYBSxaa7sX6r3I0azp6BS7yMsY0w)
+![](_site/site_libs/images/3.2.3_dataset.png)
 
 #### 3.2.3.3 Downloading the DEM
 
@@ -202,7 +212,11 @@ Click on the Results tab. Only 1 dataset may be available (SRTM1N32E022V3). 
 
 At SRTM1N32E022V3 pane, click on the download icon ![](https://lh7-us.googleusercontent.com/geIOaWuwRRrKC_F_5z37bEbUYAY9x5CPmFWDNZnfPOzY8g1W0ilH403zRr4RuzjT4fogkZXm5QTAL3_NdV0d4xKsjOQVTyJKTDMAf2udzSFUtXeUvFeMpdi8pIKW2a1EgDcgPhuC3RFOXBCLVv0ndts). 
 
+![](_site/site_libs/images/3.2.3_download.png)
+
 In the Download Options window, click download for the GeoTIFF 1 Arc-second option to download the DEM TIFF file.
+
+![](_site/site_libs/images/3.2.3_downloadoption.png)
 
 # Data Dictionary
 
