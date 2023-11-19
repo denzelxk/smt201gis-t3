@@ -50,8 +50,6 @@ We will now save only the selected features within our study area for use.
 
 #### 3.3.2 Identifying residential/apartment buildings
 
-\
-
 At this stage, we need to identify the residential and apartment buildings in Derna as well as classify those buildings that are unclassified into the above-mentioned buildings based on area size.
 
 -   Navigate to: Layers Sidebar \> Right click "Derna - Buildings" \> Open Attribute Table
