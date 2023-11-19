@@ -11,7 +11,9 @@ website:
       - dataPrep.qmd
       - Report.qmd
       - analysis.qmd
+        text: Analysis
       - results.qmd
+        text: results
       - learned.qmd
       - poster.qmd
     right: 
