@@ -3,17 +3,16 @@ project:
 
 website:
   title: "Saving Derna"
+  logo: _site/site_libs/images/logo.png
   navbar:
     backgroud: primary
     search: true
     left:
       - dataPrep.qmd
       - Report.qmd
-        text: Methodology
       - analysis.qmd
       - results.qmd
       - learned.qmd
-        text: Lessons Learned
       - poster.qmd
     right: 
       - href: index.qmd
